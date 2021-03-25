@@ -1,6 +1,4 @@
 label basement_bedroom_table:
-    if EP1==True:
-        jump basement_bedroom_table_EP1
     $ print "enter_basement_bedroom_table"
     $ miniMapData = []
 
@@ -8,8 +6,6 @@ label basement_bedroom_table:
     return
 
 label basement_bedroom_table_init:
-    if EP1==True:
-        return
     $ add_object_to_scene("Book", {"type":2, "base":"Basement_Table_Book", "click" : "basement_bedroom2_environment", "actions" : "l", "zorder" : 0}, scene="basement_bedroom_table")
     $ add_object_to_scene("Box", {"type":2, "base":"Basement_Table_Box", "click" : "basement_bedroom_table_environment", "actions" : "lh", "zorder" : 0, "b":0.13}, scene="basement_bedroom_table")
     $ add_object_to_scene("Lamp", {"type":2, "base":"Basement_Table_Lamp", "click" : "basement_bedroom2_environment", "actions" : "l", "zorder" : 0}, scene="basement_bedroom_table")
@@ -32,8 +28,6 @@ label basement_bedroom_table_init:
     return
 
 label basement_bedroom_table_teleport:
-    if EP1==True:
-        jump basement_bedroom_table_teleport_EP1
     if obj_name == "Teleport_Bedroom_Back":
         $ sleepAfterEat = False
         $ basementBedroomMonicaSleepGfx = False
@@ -42,8 +36,6 @@ label basement_bedroom_table_teleport:
     return
 
 label basement_bedroom_table_environment:
-    if EP1==True:
-        jump basement_bedroom_table_environment_EP1
     if obj_name == "Box":
         if act == "l":
             mt "Старый ящик в старом столе..."
@@ -56,55 +48,4 @@ label basement_bedroom_table_environment:
             mt "Закрыт..."
             "Мне неинтересно что там..."
 
-    return
-
-
-
-# EP1
-
-
-
-label basement_bedroom_table_EP1:
-    $ print "enter_basement_bedroom_table"
-    $ miniMapData = []
-
-    $ scene_name = "basement_bedroom_table"
-    $ scene_caption = t_("BASEMENT")
-    $ clear_scene_from_objects(scene_name)
-
-    $ scene_image = "scene_Basement_Bedroom_Table"
-
-    $ add_object_to_scene("Book", {"type":2, "base":"Basement_Table_Book", "click" : "basement_bedroom2_environment", "actions" : "l", "zorder" : 0})
-    $ add_object_to_scene("Box", {"type":2, "base":"Basement_Table_Box", "click" : "basement_bedroom_table_environment", "actions" : "lh", "zorder" : 0, "b":0.13})
-    $ add_object_to_scene("Lamp", {"type":2, "base":"Basement_Table_Lamp", "click" : "basement_bedroom2_environment", "actions" : "l", "zorder" : 0})
-
-    if basementBedroomJournal == True:
-        $ add_object_to_scene("Journal", {"type":2, "base":"Basement_Bedroom_Table_Journal", "click" : "basement_bedroom_table_environment", "actions" : "lh", "zorder" : 1})
-
-    $ add_object_to_scene("Teleport_Bedroom_Back", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_bedroom_table_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
-
-    return
-
-label basement_bedroom_table_teleport_EP1:
-    if obj_name == "Teleport_Bedroom_Back":
-        call change_scene("basement_bedroom2") from _call_change_scene_176
-        return
-    return
-
-label basement_bedroom_table_environment_EP1:
-    if obj_name == "Box":
-        if act == "l":
-            mt "Старый ящик в старом столе..."
-        if act == "h":
-            sound snd_door_locked1
-            $ renpy.pause(1.0)
-            mt "Закрыт..."
-            "Мне неинтересно что там..."
-
-    if obj_name == "Journal":
-        if act == "l":
-            mt "Это мой журнал."
-        if act == "h":
-            call afterJailHouse_dialogue21() from _call_afterJailHouse_dialogue21
-            return
     return

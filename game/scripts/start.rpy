@@ -43,14 +43,6 @@ default episode2part = 1
 default bardieCensored = False
 
 label start:
-    menu:
-        "Episode 1":
-            jump start_EP1
-        "Episode 2":
-            jump start_EP2
-    return
-    
-label start_EP2:
     #new game
     $ bardieCensored = True
     $ after_load_ready_to_render = True
