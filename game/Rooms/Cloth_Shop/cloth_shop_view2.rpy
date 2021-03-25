@@ -1,4 +1,6 @@
 label cloth_shop_view2:
+    if EP1== True:
+        jump cloth_shop_view2_EP1
     $ print "enter_cloth_shop_view2"
     $ miniMapData = []
 
@@ -8,6 +10,8 @@ label cloth_shop_view2:
     return
 
 label cloth_shop_view2_init:
+    if EP1 == True:
+        return
     $ add_object_to_scene("Monica", {"type":2, "base":"Cloth_Shop_View2_Monica_[cloth]", "click" : "cloth_shop_view1_environment", "actions" : "l", "zorder" : 10}, scene="cloth_shop_view2")
 
     $ add_object_to_scene("Shop_Visitor3", {"active": False, "type":2, "base":"Cloth_Shop_View2_v3", "click" : "cloth_shop_view2_environment", "actions" : "lt", "zorder" : 5, "group":"cloth_shop_visitors", "icon_t":"/Icons/talk" + res.suffix +".png"}, scene="cloth_shop_view2")
@@ -22,6 +26,8 @@ label cloth_shop_view2_init:
     return
 
 label cloth_shop_view2_teleport:
+    if EP1 == True:
+        jump cloth_shop_view2_teleport_EP1
     if obj_name == "Teleport_Cloth_Shop_View1":
         call change_scene("cloth_shop_view1") from _call_change_scene_305
         return
@@ -32,6 +38,8 @@ label cloth_shop_view2_teleport:
 
 
 label cloth_shop_view2_environment:
+    if EP1 == True:
+        jump cloth_shop_view2_environment_EP1
     if obj_name == "Shop_Visitor3":
         if act== "l":
             mt "Покупатель в этом жутком магазине."

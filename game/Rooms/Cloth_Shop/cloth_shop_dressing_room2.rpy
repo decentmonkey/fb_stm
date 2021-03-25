@@ -1,5 +1,7 @@
 
 label cloth_shop_dressing_room2:
+    if EP1 == True:
+        jump cloth_shop_dressing_room2_EP1
     $ print "enter_cloth_shop_dressing_room2"
     $ miniMapData = []
 
@@ -9,6 +11,8 @@ label cloth_shop_dressing_room2:
     return
 
 label cloth_shop_dressing_room2_init:
+    if EP1 == True:
+        return
     $ add_object_to_scene("Shop_Visitor4", {"type":2, "base":"Cloth_Shop_dressing_room2_v4", "click" : "cloth_shop_dressing_room2_environment", "actions" : "lt", "zorder" : 5, "group":"cloth_shop_visitors"}, scene="cloth_shop_dressing_room2")
     $ add_object_to_scene("Shop_Visitor7", {"type":2, "base":"Cloth_Shop_dressing_room2_v7", "click" : "cloth_shop_dressing_room2_environment", "actions" : "lt", "zorder" : 5, "group":"cloth_shop_visitors"}, scene="cloth_shop_dressing_room2")
     $ add_object_to_scene("Shop_Visitor8", {"type":2, "base":"Cloth_Shop_dressing_room2_v8", "click" : "cloth_shop_dressing_room2_environment", "actions" : "lt", "zorder" : 5, "group":"cloth_shop_visitors"}, scene="cloth_shop_dressing_room2")
@@ -24,13 +28,16 @@ label cloth_shop_dressing_room2_init:
     return
 
 label cloth_shop_dressing_room2_teleport:
-
+    if EP1 == True:
+        jump cloth_shop_dressing_room2_EP1
     if obj_name == "Teleport_Dressing_Room":
         call change_scene("cloth_shop_dressing_room") from _call_change_scene_248
         return
     return
 
 label cloth_shop_dressing_room2_environment:
+    if EP1== True:
+        jump cloth_shop_dressing_room2_environment_EP1
     if obj_name == "Sofa":
         if act == "l":
             mt "Не могу поверить что мне пришлось спать здесь!"
