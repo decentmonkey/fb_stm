@@ -125,10 +125,10 @@ label EP1_bank_office_talk1:
 
     $ add_objective("goto_office1", t_("Ехать в Офис"), c_pink, 20)
     $ drivingPlacePlannedArray["Steve_Office"] = "steve1_drive1"
-    $ focus_map("Teleport_Monica_Office", "EP1_steve1_drive1_discard_others")
+    $ ep1_focus_map("Teleport_Monica_Office", "EP1_steve1_drive1_discard_others")
     $ mapSubstMonicaOfficeToSteve = True
 
-#    $ unfocus_map()
+#    $ ep1_unfocus_map()
     call EP1_refresh_scene_fade()
     return
 

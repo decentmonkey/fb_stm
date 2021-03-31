@@ -10,7 +10,7 @@ init python:
             if suffix == " ":
                 suffix = ""
             obj_prop_name = obj_properties_prefix + suffix
-            if obj_data.has_key(obj_prop_name) == False:
+            if obj_data.has_key(obj_prop_name) == False or obj_data[obj_prop_name] == False:
                 obj_data[obj_prop_name] = get_image_filename(obj_base + suffix)
                 canvas_base_name = obj_base + suffix
                 canvas_offset = get_canvas_offset(canvas_base_name)
@@ -19,9 +19,6 @@ init python:
                 canvas_base_name = obj_data[obj_prop_name]
                 canvas_offset = get_canvas_offset(canvas_base_name)
                 obj_data[obj_prop_name] = get_image_filename(obj_data[obj_prop_name])
-#                if name == "Spot":
-#                    print "canvas_" + obj_prop_name
-#                    print canvas_offset
 
             if canvas_offset != False:
                 obj_data["canvas_" + obj_prop_name] = canvas_offset

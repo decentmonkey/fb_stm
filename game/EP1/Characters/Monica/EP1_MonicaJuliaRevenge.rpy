@@ -57,7 +57,7 @@ label EP1_floor2_julia_monica_revenge_start:
 label EP1_floor2_julia_monica_revenge_hair_dye_taken:
     $ remove_objective("find_hair_dye")
     $ add_objective("spill_hair_dye", t_("Разлить куда-нибудь краску для волос"), c_red, 20)
-    $ EP1_autorun_to_object("floor2", "EP2_floor2_julia_monica_revenge_look_for_spill_hair_dye")
+    $ EP1_autorun_to_object("floor2", "EP1_floor2_julia_monica_revenge_look_for_spill_hair_dye")
     return
 
 label EP1_floor2_julia_monica_revenge_look_for_spill_hair_dye:

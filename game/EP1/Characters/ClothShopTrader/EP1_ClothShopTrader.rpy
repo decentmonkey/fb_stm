@@ -2,7 +2,7 @@ label EP1_clothShopTraderScene1:
     scene black_screen
     with Dissolve(1)
     stop music fadeout 1.0
-    call EP1_textonblack(t_("ТЕМ ВРЕМЕНЕМ..."))
+    call textonblack(t_("ТЕМ ВРЕМЕНЕМ..."))
     scene black_screen
     with Dissolve(1)
     music Hidden_Agenda

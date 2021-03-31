@@ -170,7 +170,7 @@ label EP1_afterJailFredDialogue2:
 
     label EP1_test_label1:
 
-    $ focus_map("Teleport_House", "EP1_afterJailFredDialogue_discardlocation")
+    $ ep1_focus_map("Teleport_House", "EP1_afterJailFredDialogue_discardlocation")
     $ streetDickOfficeStage = 2
     $ teleportHomeFredBlowjobFlag = True
     $ bFredFollowingMonica = True
@@ -679,7 +679,7 @@ label EP1_afterJailFredDialogue3:
     $ map_enabled = False
     $ hud_preset_current = "default"
     $ map_hud_preset_current = "map"
-    $ unfocus_map()
+    $ ep1_unfocus_map()
     $ EP1_subst_to_object("Teleport_Gate", "EP1_afterJailHouseFamily_dialogue1")
     $ EP1_subst_to_object("Teleport_House", "EP1_afterJailHouseFamily_dialogue1")
     $ EP1_subst_to_object("Teleport_Fence", "EP1_afterJailHouseFamily_dialogue1")

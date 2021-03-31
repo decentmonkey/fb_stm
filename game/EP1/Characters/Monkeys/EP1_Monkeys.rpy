@@ -837,94 +837,94 @@ label EP1_monkeys_monica_photostudio1_2:
     with Dissolve(1.0)
 
     img 1274
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1275
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1276
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1277
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1278
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1279
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1280
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1281
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1282
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1283
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1284
     w
     img 1285
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1286
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1287
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1288
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1289
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1290
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1291
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1292
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1293
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1294
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1295
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1296
     w
     img 1297
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1298
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1299
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1300
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1301
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1302
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1303
     w
     img 1304
-    call EP1_photoshop_flash()
+    call photoshop_flash()
     w
     img 1305
     w

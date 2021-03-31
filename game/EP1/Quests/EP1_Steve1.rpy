@@ -96,7 +96,7 @@ label EP1_steve1_drive1(target_scene):
     imgl 1684
     m "Все, пока."
     $ map_objects["Teleport_Steve_Office"]["state"] = "visible"
-    $ unfocus_map()
+    $ ep1_unfocus_map()
 
 
 #    call EP1_change_scene("street_steve_office", "Fade_long", "snd_car_engine")
@@ -825,7 +825,7 @@ label EP1_steve1_secretary_talk4:
 label EP1_steve1_scene1_1: #разговор с Джейн и Тиффани
 
     music Hidden_Agenda
-    call EP1_textonblack(t_("ТЕМ ВРЕМЕНЕМ..."))
+    call textonblack(t_("ТЕМ ВРЕМЕНЕМ..."))
     img black_screen
     with Dissolve(1)
 #    img

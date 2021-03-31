@@ -62,7 +62,7 @@ label EP1_dick_meeting1:
     $ monicaEnterCarLookingCharacter = "Dick"
     $ add_objective("drive_to_cloth_shop", t_("Ехать с Диком в магазин одежды"), c_orange, 25)
     $ dickMeeting1Drive1DialoguePlanned = True
-    $ focus_map("Teleport_Cloth_Shop", "EP1_dick_meeting1_map_disabled")
+    $ ep1_focus_map("Teleport_Cloth_Shop", "EP1_dick_meeting1_map_disabled")
 
 #    music casualMusic
     return
@@ -130,7 +130,7 @@ label EP1_drive_speak_monica_dick_day1_drive1():
 
     "Из тех что открыт."
 
-    $ unfocus_map()
+    $ ep1_unfocus_map()
 
     $ EP1_autorun_to_object("street_cloth_shop", "drive_speak_monica_dick_day1_drive2")
 

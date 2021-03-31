@@ -342,7 +342,7 @@ label EP1_jail_cabinet_dialogue7:
     "Одни проблемы от тебя!"
 
     stop music fadeout 1.0
-    call EP1_textonblack(t_("СПУСТЯ 15 МИНУТ..."))
+    call textonblack(t_("СПУСТЯ 15 МИНУТ..."))
     img black_screen
     with Dissolve(1)
     music Groove2_85

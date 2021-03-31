@@ -12,7 +12,7 @@ label EP1_dress_return_drive1(target_scene):
     imgr 1905
     fred "Хорошо, Мэм!"
 
-    call EP1_textonblack(t_("СПУСТЯ ЧАС..."))
+    call textonblack(t_("СПУСТЯ ЧАС..."))
     img scene_Map_Evening
     imgl 1904
     with Dissolve(1)

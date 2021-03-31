@@ -578,7 +578,7 @@ label EP1_dickAfterJail_secretary_dialogue5:
                     # день свадьбы
 
                     stop music fadeout 1.0
-                    call EP1_textonblack(t_("Спустя некоторое время..."))
+                    call textonblack(t_("Спустя некоторое время..."))
                     music tour_of_the_flowers
                     img black_screen
                     with Dissolve(1)
@@ -612,29 +612,29 @@ label EP1_dickAfterJail_secretary_dialogue5:
                     with fadelong
                     w
                     img 5754
-                    call EP1_photoshop_flash()
+                    call photoshop_flash()
                     w
                     img 5755
-                    call EP1_photoshop_flash()
+                    call photoshop_flash()
                     w
                     img 5756
-                    call EP1_photoshop_flash()
+                    call photoshop_flash()
                     w
                     img 5757
-                    call EP1_photoshop_flash()
+                    call photoshop_flash()
                     w
                     img 5758
-                    call EP1_photoshop_flash()
+                    call photoshop_flash()
                     w
                     img 5759
-                    call EP1_photoshop_flash()
+                    call photoshop_flash()
                     w
                     music beautiful_messenger_piano
                     img black_screen
                     with Dissolve(1.0)
                     img 5760
                     with fadelong
-#                    call EP1_photoshop_flash()
+#                    call photoshop_flash()
                     alex_photograph "Мэм! Я отснял достаточно материала!"
                     "Это будет фантастический выпуск!"
                     img 5761

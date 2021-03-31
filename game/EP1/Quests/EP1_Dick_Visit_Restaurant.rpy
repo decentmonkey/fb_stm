@@ -9,8 +9,8 @@ label EP1_dick_meeting1_restaurant_init:
     $ add_objective("dick_meeting1_goto_restaurant", t_("Ехать с Диком в ресторан"), c_pink, 25)
     $ dick_meeting1_restaurant_drive_dialogue1_planned = True
     $ dickMeeting1RestaurantPlanned = True
-    $ focus_map("Teleport_Rich_Hotel", "EP1_dick_meeting1_restaurant_map_disabled")
-#    $ unfocus_map()
+    $ ep1_focus_map("Teleport_Rich_Hotel", "EP1_dick_meeting1_restaurant_map_disabled")
+#    $ ep1_unfocus_map()
     return
 
 label EP1_dick_meeting1_restaurant_map_disabled(obj_name, obj_data):
@@ -55,7 +55,7 @@ label EP1_dick_meeting1_restaurant_drive_dialogue1:
     return
 
 label EP1_dick_waiting_monica_dialogue2:
-    $ unfocus_map()
+    $ ep1_unfocus_map()
     $ remove_objective("dick_meeting1_goto_restaurant")
     $ EP1_autorun_to_object("rich_hotel_reception", "dick_meeting1_restaurant_reception_dialogue")
     imgr Dick3

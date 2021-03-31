@@ -1,4 +1,4 @@
-define debugMode = False
+define debugMode = True
 
 default gameStage = 0
 default gameSubStage = 0
@@ -42,7 +42,14 @@ default act = ""
 default episode2part = 1
 default bardieCensored = False
 
+default EP1 = False
+
 label start:
+    menu:
+        "Episode 1":
+            jump EP1_start
+        "Episode 2":
+            pass
     #new game
     $ bardieCensored = True
     $ after_load_ready_to_render = True

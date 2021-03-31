@@ -249,7 +249,10 @@ label EP1_wardrobe(name, obj_data):
                     m "Весь мир у моего каблука!"
                     $ EP1_change_cloth("BusinessCloth", "BusinessCloth3")
 
-    call expression scene_name
+    $ scene_label = scene_name
+    if renpy.has_label("EP1_" + scene_label):
+        $ scene_label = "EP1_" + scene_label
+    call expression scene_label
     return
 
 label EP1_Wardrobe_use_businesscloth:

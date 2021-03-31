@@ -30,7 +30,7 @@ label EP1_police_jail_food_scene_environment(obj_name, obj_data):
             sound snd_eating
             stop music fadeout 1.0
             sound snd_eating
-            call EP1_textonblack(t_("Спустя 5 минут..."))
+            call textonblack(t_("Спустя 5 минут..."))
             img black_screen
             with Dissolve(1)
             call EP1_change_scene(jailFoodLastScene, "Fade", False)

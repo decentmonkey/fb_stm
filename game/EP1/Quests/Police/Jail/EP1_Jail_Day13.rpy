@@ -4,7 +4,7 @@ label EP1_jail_day13:
     $ jailDaySceneStage = 0
     $ jailScenePlace = 0
     stop music fadeout 1.0
-    call EP1_textonblack(t_("ДЕНЬ 13"))
+    call textonblack(t_("ДЕНЬ 13"))
     img black_screen
     with Dissolve(1)
     music Jail_Clock
@@ -135,7 +135,7 @@ label EP1_jail_day13:
 
     #В комнате допросов
     stop music fadeout 1.0
-    call EP1_textonblack(t_("СПУСТЯ 15 МИНУТ..."))
+    call textonblack(t_("СПУСТЯ 15 МИНУТ..."))
     img black_screen
     with Dissolve(1)
     music Groove2_85

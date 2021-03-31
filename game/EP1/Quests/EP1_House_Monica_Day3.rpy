@@ -16,13 +16,13 @@ label EP1_quest_house_monica_day3_day_init:
 #    $ juliaLocation = "floor1" #debug
     $ EP1_autorun_to_object("floor1", False)
     if juliaPunished == True:
-        call EP1_textonblack(t_("ЭТИМ ВЕЧЕРОМ..."))
+        call textonblack(t_("ЭТИМ ВЕЧЕРОМ..."))
         img black_screen
         with Dissolve(1)
         call EP1_julia_scene_floor2_evening1_1()
 
 
-    call EP1_textonblack(t_("ДЕНЬ 3..."))
+    call textonblack(t_("ДЕНЬ 3..."))
     img black_screen
     with Dissolve(1)
     $ changeDayTime("day")

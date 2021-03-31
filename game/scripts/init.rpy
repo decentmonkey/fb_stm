@@ -543,27 +543,27 @@ default biffMusic = "Groove2_85"
 default persistent.pause_before_change_slide = False
 default persistent.auto_clipboard = False
 
-default map_enabled = True
+#default map_enabled = True
 default map_disabled_forced = False
 default last_map_enabled = True
 
-define fadehold = Fade(0.5, 1.0, 0.5)
-define fadelong = Fade(0.5, 0.5, 0.5)
+#define fadehold = Fade(0.5, 1.0, 0.5)
+#define fadelong = Fade(0.5, 0.5, 0.5)
 define diss = Dissolve(0.5)
-default streetFunMusic = "road_trip"
-default casualMusic = "Stealth_Groover"
+#default streetFunMusic = "road_trip"
+#default casualMusic = "Stealth_Groover"
 
-default define_version = 1
-default define_version_current = 0
+#default define_version = 1
+#default define_version_current = 0
 
-default text_button_default_layout = "default"
+#default text_button_default_layout = "default"
 
-default clickHoldMode = True #блокировка клика после диалога, если мышкой не двигали
-default clickHoldFlag = False
-default clickHoldLastTime = 0
-default clickHoldLastMouseX = 0
-default clickHoldLastMouseY = 0
-default screenActionHappened = False
+#default clickHoldMode = True #блокировка клика после диалога, если мышкой не двигали
+#default clickHoldFlag = False
+#default clickHoldLastTime = 0
+#default clickHoldLastMouseX = 0
+#default clickHoldLastMouseY = 0
+#default screenActionHappened = False
 default obj_name = ""
 
 default bitchmeterValue = 0
@@ -573,10 +573,10 @@ default corruptionMax = 1000
 default corruption_places = {}
 default char_progress_stored = {}
 default char_data = False
-default dialogue_active_flag = False
+#default dialogue_active_flag = False
 default chickMode = False
 
-define imagesSizesCache = {}
+#define imagesSizesCache = {}
 default sceneSpriteSurfacesCacheIdle = {}
 default sceneSpriteSurfacesCache = {}
 default sceneSpriteSurfacesCacheSceneName = False
@@ -794,7 +794,7 @@ label game_init:
     $ show_scene_loop_flag = False
     $ interface_blocked_flag = False
     define dissolve1 = Dissolve(0.5)
-    default last_dialogue_character = "m"
+#    default last_dialogue_character = "m"
 
     $ width_half = config.screen_width / 2
 

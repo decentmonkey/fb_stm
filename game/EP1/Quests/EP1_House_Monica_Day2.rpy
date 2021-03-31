@@ -15,7 +15,7 @@ label EP1_quest_house_monica_day2_day_init:
 #    $ juliaPunishedNone = True #debug
 #    $ juliaLocation = "floor1" #debug
 
-    call EP1_textonblack(t_("ДЕНЬ 2..."))
+    call textonblack(t_("ДЕНЬ 2..."))
     img black_screen
     with Dissolve(1)
     $ changeDayTime("day")

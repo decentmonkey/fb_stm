@@ -249,7 +249,7 @@ screen screen_sprites(data):
 #                ]
 
 #            $ data = scenes_data["objects"][scene_name] if scene_name in scenes_data["objects"] else False
-            if data != False and game_version1_screen_ready_to_render == True and episode == 2 and after_load_ready_to_render == True:
+            if data != False and game_version1_screen_ready_to_render == True and after_load_ready_to_render == True:
                 $ zorder_list = []
                 $ for i in data: zorder_list.append([i, data[i]["zorder"]])
                 $ zorder_list.sort(key=lambda x:x[1])
@@ -955,7 +955,7 @@ screen character_info_screen(obj_name, x, y):
                 ypos 0.61
                 xsize int(365 * gui.resolution.koeff)
                 anchor (0.5, 0.0)
-                value barValue
+                value AnimatedValue(barValue, 1.0, 1.0, barValue)
 #                xysize(gui.resolution.hud_screen.bitchmeter_x_size,gui.resolution.hud_screen.bitchmeter_y_size)
                 bar_vertical False
                 right_bar "/icons/bar/bar2_empty" + res.suffix + ".png"
@@ -1253,7 +1253,7 @@ screen hud_screen(hud_presets):
                         action [
                             Return(["show_achievements"])
                         ]
-                    if hud_presets.has_key("display_questlog") == False or hud_presets["display_questlog"] == True:
+                    if EP1 == False and (hud_presets.has_key("display_questlog") == False or hud_presets["display_questlog"] == True):
                         null:
                             height gui.resolution.hud_screen.height1
                         imagebutton:
@@ -1267,7 +1267,7 @@ screen hud_screen(hud_presets):
                             action [
                                 Return(["show_questlog"])
                             ]
-                    if hud_presets.has_key("display_questhelp") == False or hud_presets["display_questhelp"] == True:
+                    if EP1 == False and (hud_presets.has_key("display_questhelp") == False or hud_presets["display_questhelp"] == True):
                         null:
                             height gui.resolution.hud_screen.height1
                         imagebutton:
@@ -1408,7 +1408,7 @@ screen hud_screen(hud_presets):
             bar:
                 xpos config.screen_width - gui.resolution.hud_screen.bitchmeter_x_pos
                 ypos gui.resolution.hud_screen.bitchmeter_y_pos
-                value (100.0 / maxBitchness * bitchmeterValue) / 100.0
+                value AnimatedValue((100.0 / maxBitchness * bitchmeterValue) / 100.0, 1.0, 1.0, (100.0 / maxBitchness * bitchmeterValue) / 100.0)
                 xoffset 5
                 xysize(gui.resolution.hud_screen.bitchmeter_x_size,gui.resolution.hud_screen.bitchmeter_y_size)
                 bar_vertical True
@@ -1421,7 +1421,7 @@ screen hud_screen(hud_presets):
             bar:
                 xpos config.screen_width - gui.resolution.hud_screen.corruption_x_pos
                 ypos gui.resolution.hud_screen.bitchmeter_y_pos
-                value (100.0 / corruptionMax * corruption) / 100.0
+                value AnimatedValue((100.0 / corruptionMax * corruption) / 100.0, 1.0, 1.0, (100.0 / corruptionMax * corruption) / 100.0)
                 xoffset 5
                 xysize(gui.resolution.hud_screen.bitchmeter_x_size,gui.resolution.hud_screen.bitchmeter_y_size)
                 bar_vertical True

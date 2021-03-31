@@ -42,7 +42,7 @@ label EP1_street_fitness_teleport(obj_name, obj_data):
             stop music fadeout 4.0
             scene black_screen
             with Dissolve(1)
-            call EP1_textonblack_long("The End of V0.2\nTo be continued very soon...\nCheck for updates!")
+            call textonblack_long("The End of V0.2\nTo be continued very soon...\nCheck for updates!")
             scene black_screen
             with Dissolve(1)
             $ renpy.full_restart(transition=Fade(1.0, 1.0, 1.0))

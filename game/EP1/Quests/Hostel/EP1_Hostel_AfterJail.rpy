@@ -576,7 +576,7 @@ label EP1_hostelAfterJail_bedroom_sleep1:
     scene black_screen
     with Dissolve(1)
     stop music fadeout 1.0
-    call EP1_textonblack_long("УТРО")
+    call textonblack_long("УТРО")
     scene black_screen
     with Dissolve(1)
     $ changeDayTime("day")

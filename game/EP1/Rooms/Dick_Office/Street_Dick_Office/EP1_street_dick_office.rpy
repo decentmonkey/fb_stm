@@ -101,7 +101,7 @@ label EP1_street_dick_office_environment(obj_name, obj_data):
 
     scene black_screen
     with Dissolve(1)
-    call EP1_textonblack_long("The End of V0.1\nTo be continued very soon...\nCheck for updates!")
+    call textonblack_long("The End of V0.1\nTo be continued very soon...\nCheck for updates!")
     scene black_screen
     with Dissolve(1)
 

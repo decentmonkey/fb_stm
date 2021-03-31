@@ -109,7 +109,7 @@ label EP1_marcus_cabinet_dialogue3:
     stop music fadeout 1.0
     $ renpy.pause(1)
     sound snd_handcuffs
-    call EP1_textonblack(t_("ЧТО?????"))
+    call textonblack(t_("ЧТО?????"))
     img black_screen
     with Dissolve(1)
 

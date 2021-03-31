@@ -12,7 +12,7 @@ label EP1_jail_day2:
     $ policeCellCagelabel = "jail_day2_Cage"
     call EP1_refresh_scene_fade()
     stop music fadeout 1.0
-    call EP1_textonblack(t_("ДЕНЬ 2"))
+    call textonblack(t_("ДЕНЬ 2"))
     img black_screen
     with Dissolve(1)
     music Cheery_Monday

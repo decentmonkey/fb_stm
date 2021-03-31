@@ -7,7 +7,6 @@ label EP1_intro_scene:
 
     $ scene_image = "scene_Intro"
     $ EP1_add_object_to_scene("Monica", {"type" : 2, "base" : "Intro_Monica", "click" : "EP1_intro_environment", "actions" : "lh", "zorder":10})
-
     return
 
 label EP1_intro_environment(obj_name, obj_data):

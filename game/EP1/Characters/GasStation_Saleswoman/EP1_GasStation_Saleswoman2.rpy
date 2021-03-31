@@ -10,7 +10,7 @@ label EP1_gas_saleswoman_dialogue2:
         call EP1_gas_saleswoman_dialogue2_alternative()
         return
     music Hidden_Agenda
-    call EP1_textonblack(t_("ТЕМ ВРЕМЕНЕМ..."))
+    call textonblack(t_("ТЕМ ВРЕМЕНЕМ..."))
     img black_screen
     with Dissolve(1)
 #    music Groove2_85
@@ -1147,7 +1147,7 @@ label EP1_gas_saleswoman_dialogue2_2:
 
 label EP1_gas_saleswoman_dialogue2_alternative():
     music Hidden_Agenda
-    call EP1_textonblack(t_("ТЕМ ВРЕМЕНЕМ..."))
+    call textonblack(t_("ТЕМ ВРЕМЕНЕМ..."))
     img black_screen
     with Dissolve(1)
 #    music Groove2_85

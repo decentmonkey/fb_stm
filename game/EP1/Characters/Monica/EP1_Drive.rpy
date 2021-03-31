@@ -45,6 +45,8 @@ label EP1_startDriving:
     if drivingPlacePlannedArray.has_key(target_map_scene) and drivingPlacePlannedArray[target_map_scene] != False:
         $ driveSceneTocall = drivingPlacePlannedArray[target_map_scene]
         $ drivingPlacePlannedArray[target_map_scene] = False
+        if renpy.has_label("EP1_" + driveSceneTocall):
+            $ driveSceneTocall = "EP1_" + driveSceneTocall
         call expression driveSceneTocall pass (target_scene)
 #    if beforePolicaPhoneDialoguePlanned == True:
 #        $ beforePolicaPhoneDialoguePlanned = False

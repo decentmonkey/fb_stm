@@ -11,7 +11,7 @@ label EP1_jail_day10:
     $ policeCellBedlabel = "jail_day10_Bed"
     $ policeCellCagelabel = "jail_day10_Cage"
     stop music fadeout 1.0
-    call EP1_textonblack(t_("ДЕНЬ 10"))
+    call textonblack(t_("ДЕНЬ 10"))
     img black_screen
     with Dissolve(1)
     music Jail_Clock
@@ -65,7 +65,7 @@ label EP1_jail_day10_Bed(obj_name, obj_data):
             call EP1_jail_day11()
             return
         stop music fadeout 1.0
-        call EP1_textonblack(t_("Спустя некоторое время..."))
+        call textonblack(t_("Спустя некоторое время..."))
         music prison_yell_music
         img black_screen
         with Dissolve(1)

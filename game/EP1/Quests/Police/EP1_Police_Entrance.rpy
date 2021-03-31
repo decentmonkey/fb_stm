@@ -80,7 +80,7 @@ label EP1_entrance_dialogue2:
             detective "Хорошо."
             "Сейчас подойду."
             stop music fadeout 1.0
-            call EP1_textonblack(t_("СПУСТЯ 5 МИНУТ..."))
+            call textonblack(t_("СПУСТЯ 5 МИНУТ..."))
             img black_screen
             with Dissolve(1)
             music Stealth_Groover
@@ -139,7 +139,7 @@ label EP1_entrance_dialogue5:
     img 2083
     detective "..."
     stop music fadeout 1.0
-    call EP1_textonblack(t_("СПУСТЯ 5 МИНУТ..."))
+    call textonblack(t_("СПУСТЯ 5 МИНУТ..."))
     img black_screen
     with Dissolve(1)
     music Pyro_Flow

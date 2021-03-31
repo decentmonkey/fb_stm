@@ -588,7 +588,7 @@ label EP1_after_jail_cloth_shop_cashier4:
     mt "Спрячусь здесь!"
     "Сюда она не должна зайти!"
     stop music fadeout 1.0
-    call EP1_textonblack(t_("СПУСТЯ 15 МИНУТ..."))
+    call textonblack(t_("СПУСТЯ 15 МИНУТ..."))
     img black_screen
     with Dissolve(1)
     music Groove2_85
@@ -745,7 +745,7 @@ label EP1_after_jail_cloth_shop_cashier9:
 
     scene black_screen
     with Dissolve(1)
-    call EP1_textonblack_long("УТРО")
+    call textonblack_long("УТРО")
     scene black_screen
     with Dissolve(1)
     $ changeDayTime("day")
@@ -1018,7 +1018,7 @@ label EP1_after_jail_cloth_shop_cashier9:
 
 #    scene black_screen
 #    with Dissolve(1)
-#    call EP1_textonblack_long("The End of V0.4\nYou could support me on Patreon if you like the game :)")
+#    call textonblack_long("The End of V0.4\nYou could support me on Patreon if you like the game :)")
 #    scene black_screen
 #    with Dissolve(1)
 #    $ renpy.full_restart(transition=Fade(1.0, 1.0, 1.0))
