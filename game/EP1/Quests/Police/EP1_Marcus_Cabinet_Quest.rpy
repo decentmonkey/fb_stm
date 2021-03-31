@@ -206,7 +206,7 @@ label EP1_marcus_cabinet_dialogue4:
     marcus "Не имеете."
 
     $ marcusCabinetState = 3
-    call EP1_refresh_scene_fade() from _call_refresh_scene_fade_197
+    call EP1_refresh_scene_fade() from _ep1call_refresh_scene_fade_197
     return
 
 label EP1_marcus_cabinet_dialogue5:
@@ -228,7 +228,7 @@ label EP1_marcus_cabinet_dialogue5:
     "Вы же хотите получить ответы на вопросы?"
 
     $ marcusCabinetState2 = 1
-    call EP1_refresh_scene_fade() from _call_refresh_scene_fade_198
+    call EP1_refresh_scene_fade() from _ep1call_refresh_scene_fade_198
 
     return
 
@@ -252,7 +252,7 @@ label EP1_marcus_cabinet_dialogue6:
     "Вести светскую жизнь."
 
     $ marcusCabinetState2 = 2
-    call EP1_refresh_scene_fade() from _call_refresh_scene_fade_199
+    call EP1_refresh_scene_fade() from _ep1call_refresh_scene_fade_199
 
     return
 
@@ -431,7 +431,7 @@ label EP1_marcus_cabinet_dialogue8:
     img 2189
     marcus "Увести ее."
     music Gearhead
-    call EP1_jail_day1() from _call_jail_day1
+    call EP1_jail_day1() from _ep1call_jail_day1
     return
 
 label EP1_marcus_cabinet_dialogue9:
@@ -459,7 +459,7 @@ label EP1_marcus_cabinet_dialogue9:
     with fadelong
     marcus "Здравствуйте, Миссис Бакфетт."
     "Присаживайтесь."
-    call EP1_refresh_scene_fade() from _call_refresh_scene_fade_200
+    call EP1_refresh_scene_fade() from _ep1call_refresh_scene_fade_200
 
     return
 
@@ -485,7 +485,7 @@ label EP1_marcus_cabinet_dialogue10:
     "Наши Masters в этом очень опытны."
     "Но я Вас позвал не для этого."
     $ marcusCabinetState = 6
-    call EP1_refresh_scene_fade() from _call_refresh_scene_fade_201
+    call EP1_refresh_scene_fade() from _ep1call_refresh_scene_fade_201
     return
 
 label EP1_marcus_cabinet_dialogue11:
@@ -568,7 +568,7 @@ label EP1_marcus_cabinet_dialogue11:
     "В любом случае Вы ненадолго покинете эти стены."
     music Power_Bots_Loop
     $ marcusCabinetState = 7
-    call EP1_refresh_scene_fade() from _call_refresh_scene_fade_202
+    call EP1_refresh_scene_fade() from _ep1call_refresh_scene_fade_202
 
     return
 
@@ -647,7 +647,7 @@ label EP1_marcus_cabinet_dialogue12:
     marcus "Итак."
     "Что Вы выбираете?"
     $ marcusCabinetState = 8
-    call EP1_refresh_scene_fade() from _call_refresh_scene_fade_203
+    call EP1_refresh_scene_fade() from _ep1call_refresh_scene_fade_203
     return
 
 label EP1_marcus_cabinet_dialogue13:

@@ -32,7 +32,7 @@ label EP1_monica_office_entrance_teleport2(obj_name, obj_data):
         "Теперь мне не попасть внутрь!"
         "Но ничего! Я еще найду способ это сделать и посмотреть на этого ублюдка!"
         "Который думает что он теперь главный в моей компании!"
-#        call EP1_change_scene("monica_office_secretary", "Fade_long", "snd_lift") from _call_change_scene_79
+#        call EP1_change_scene("monica_office_secretary", "Fade_long", "snd_lift") from _ep1call_change_scene_79
         return
     if obj_name == "Teleport_Street_Monica_Office":
         call EP1_change_scene("street_monica_office", "Fade_long", "highheels_run2")

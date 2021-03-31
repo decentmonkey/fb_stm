@@ -589,7 +589,7 @@ label EP1_hostelAfterJail_bedroom_sleep1:
     $ remove_objective("go_sleep")
     $ remove_objective("dick_tomorrow1")
     $ add_objective("go_dick", t_("Идти к Дику!"), c_blue, 6)
-    $ add_objective("go_bath_call_dick", t_("Принять душ и позвонить Дику"), c_green, 10)
+    $ add_objective("go_bath_ep1call_dick", t_("Принять душ и позвонить Дику"), c_green, 10)
 
     $ EP1_autorun_to_object("EP1_hostel_bedroom", "EP1_hostelAfterJail_bedroom_dialogue3")
 
@@ -727,7 +727,7 @@ label EP1_hostelAfterJail_street_dialogue1:
         "Здесь за дом ведет какая-то дорога!"
         "Надо бежать туда!"
 
-    $ remove_objective("go_bath_call_dick")
+    $ remove_objective("go_bath_ep1call_dick")
     $ EP1_subst_to_object("Teleport_Shawarma", "EP1_hostelAfterJail_street_dialogue2")
     $ add_objective("find_place_to_take_cloth", t_("Найти место где можно одеться!"), c_red, 10)
     call EP1_refresh_scene_fade()

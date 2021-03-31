@@ -1,5 +1,5 @@
 define cageInteractAmount = 5
-default cageInteractlabel EP1_= ""
+default cageInteractlabel = ""
 default jailCageLastScene = ""
 
 label EP1_police_jail_cage_scene:

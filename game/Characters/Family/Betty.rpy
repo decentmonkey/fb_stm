@@ -1,4 +1,4 @@
-default bettyLocation = "none"
+#default bettyLocation = "none"
 
 default bettyPantiesLog = []
 default bettyPantiesCurrent = 3

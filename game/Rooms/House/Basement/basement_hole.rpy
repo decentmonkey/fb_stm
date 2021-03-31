@@ -1,4 +1,4 @@
-default basementHoleIncomingDirection = ""
+#default basementHoleIncomingDirection = ""
 
 label basement_hole:
     $ print "enter_basement_hole"

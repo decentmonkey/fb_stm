@@ -1,5 +1,5 @@
 default jailFoodLastScene = ""
-default jailFoodInteractlabel EP1_= ""
+default jailFoodInteractlabel = ""
 label EP1_police_jail_food_scene:
     $ print "enter_police_jail_food_scene"
     $ miniMapData = []
@@ -34,7 +34,7 @@ label EP1_police_jail_food_scene_environment(obj_name, obj_data):
             img black_screen
             with Dissolve(1)
             call EP1_change_scene(jailFoodLastScene, "Fade", False)
-            call expression jailFoodInteractlabel 
+            call expression jailFoodInteractlabel
             return
 
     return

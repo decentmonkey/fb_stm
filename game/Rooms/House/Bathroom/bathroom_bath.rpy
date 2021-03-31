@@ -1,4 +1,4 @@
-default monicaBathroomForbidden = True
+#default monicaBathroomForbidden = True
 
 label bathroom_bath:
     $ print "enter_bathroom_bath"

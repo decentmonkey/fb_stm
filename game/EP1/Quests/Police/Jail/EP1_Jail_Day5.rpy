@@ -29,7 +29,7 @@ label EP1_jail_day5:
         "Этому мерзкому насекомому?!"
         #
         "Я! МОНИКА БАКФЕТТ!!!"
-    call EP1_refresh_scene_fade() from _call_refresh_scene_fade_76
+    call EP1_refresh_scene_fade() from _ep1call_refresh_scene_fade_76
     return
 
 label EP1_jail_day5_Monica(obj_name, obj_data):
@@ -42,7 +42,7 @@ label EP1_jail_day5_Monica(obj_name, obj_data):
 
 label EP1_jail_day5_Bed(obj_name, obj_data):
     if act == "l":
-        call EP1_jail_day1_Bed(obj_name, obj_data) from _call_jail_day1_Bed_4
+        call EP1_jail_day1_Bed(obj_name, obj_data) from _ep1call_jail_day1_Bed_4
         return
     if jailDaySceneStage == 0:
         mt "Я.. хочу.. есть..."
@@ -52,25 +52,25 @@ label EP1_jail_day5_Bed(obj_name, obj_data):
                 pass
             "Не ложиться":
                 return
-        call EP1_jail_day6() from _call_jail_day6
+        call EP1_jail_day6() from _ep1call_jail_day6
         return
     return
 
 label EP1_jail_day5_Cage(obj_name, obj_data):
     if act == "l":
-        call EP1_jail_cage() from _call_jail_cage_5
-        call EP1_refresh_scene_fade() from _call_refresh_scene_fade_77
+        call EP1_jail_cage() from _ep1call_jail_cage_5
+        call EP1_refresh_scene_fade() from _ep1call_refresh_scene_fade_77
         return
     if act == "w":
-        $ cageInteractlabel EP1_= "jail_day5_Cage_Interact"
-        call EP1_change_scene("police_jail_cage_scene") from _call_change_scene_158
+        $ cageInteractlabel = "jail_day5_Cage_Interact"
+        call EP1_change_scene("police_jail_cage_scene") from _ep1call_change_scene_158
         return
 
     return
 
 label EP1_jail_day5_Cage_Interact:
     if jailDaySceneStage == 0:
-        call EP1_jail_day5_1() from _call_jail_day5_1
+        call EP1_jail_day5_1() from _ep1call_jail_day5_1
 
     if jailDaySceneStage == 1:
         img 2253
@@ -79,7 +79,7 @@ label EP1_jail_day5_Cage_Interact:
         "Может быть он вообще ушел?"
         "Мне не видно отсюда!"
         if jailBoobsForFoodShowed == True:
-            call EP1_jail_cage() from _call_jail_cage_6
+            call EP1_jail_cage() from _ep1call_jail_cage_6
             return
         return
     return
@@ -110,12 +110,12 @@ label EP1_jail_day5_1:
         overseer "Я ухожу?"
         menu:
             "Сказать как его зовут." if monicaKnowOverseerName == True:
-                call EP1_jail_boobs_for_food_end() from _call_jail_boobs_for_food_end_2
+                call EP1_jail_boobs_for_food_end() from _ep1call_jail_boobs_for_food_end_2
             "Показать грудь.":
                 img 2373
                 m "Стойте!"
                 # показывает сиськи
-                call EP1_jail_boobs_for_food() from _call_jail_boobs_for_food_3
+                call EP1_jail_boobs_for_food() from _ep1call_jail_boobs_for_food_3
             "Не показывать.":
                 m "Я не хочу показывать свою грудь..."
                 img 5173
@@ -123,7 +123,7 @@ label EP1_jail_day5_1:
                 img 5116
                 w
                 # уходит
-                call EP1_refresh_scene_fade() from _call_refresh_scene_fade_78
+                call EP1_refresh_scene_fade() from _ep1call_refresh_scene_fade_78
                 return
         img 5116
         with fadelong
@@ -147,8 +147,8 @@ label EP1_jail_day5_1:
     overseer "На, ешь!"
     m "Спасибо, Сэр!"
     mt "Спасибо, жирный урод!"
-    $ jailFoodInteractlabel EP1_= "jail_day5_1a"
-    call EP1_change_scene("police_jail_food_scene", "Fade", False) from _call_change_scene_159
+    $ jailFoodInteractlabel = "jail_day5_1a"
+    call EP1_change_scene("police_jail_food_scene", "Fade", False) from _ep1call_change_scene_159
     return
 
 label EP1_jail_day5_1a:
@@ -188,9 +188,9 @@ label EP1_jail_day5_1a:
     $ policeCellStageName2 = "scene_Police_Cell_2_Day_5_2"
     $ policeCellMonica1 = "Police_Cell_1_Day_5_1"
     $ policeCellMonica2 = "Police_Cell_2_Day_5_2"
-    call EP1_refresh_scene_fade() from _call_refresh_scene_fade_79
+    call EP1_refresh_scene_fade() from _ep1call_refresh_scene_fade_79
     return
 
-    call EP1_jail_day6() from _call_jail_day6_1
+    call EP1_jail_day6() from _ep1call_jail_day6_1
 
     return

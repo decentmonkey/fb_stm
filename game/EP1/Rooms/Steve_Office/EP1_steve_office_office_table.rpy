@@ -78,7 +78,7 @@ label EP1_steve_office_office_table_environment(obj_name, obj_data):
                 return
             if steveOfficeSteveTableStateTalk == 1:
                 call EP1_steve1_steve_talk3()
-                call EP1_refresh_scene_fade(
+                call EP1_refresh_scene_fade()
                 return
             if steveOfficeSteveTableStateTalk == 2:
                 call EP1_steve1_steve_talk4()

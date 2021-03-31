@@ -1,4 +1,4 @@
-default hostelBathroomStage = 0
+#default hostelBathroomStage = 0
 default hostelBathroomMonicaSuffix = 1
 label hostel_bathroom:
     $ print "enter_hostel_bathroom"

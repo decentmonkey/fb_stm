@@ -1,5 +1,5 @@
-default hostelWalkStreetEnabled = False
-default localDaySuffix = ""
+#default hostelWalkStreetEnabled = False
+#default localDaySuffix = ""
 
 label hostel_edge_1_c:
     $ print "enter_hostel_edge_1_c"

@@ -5,7 +5,7 @@ default basementBedroomJournal = True
 label EP1_basement_bedroom1:
     $ print "enter_basement_bedroom1"
     $ miniMapData = []
-    call EP1_miniMapHouseGenerate() from _call_miniMapHouseGenerate_20
+    call EP1_miniMapHouseGenerate() from _ep1call_miniMapHouseGenerate_20
 
     $ scene_name = "basement_bedroom1"
     $ scene_caption = t_("BASEMENT")

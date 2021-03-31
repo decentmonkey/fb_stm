@@ -223,7 +223,7 @@ label EP1_hostel_reception_environment(obj_name, obj_data):
             mt "Какая-то коробка..."
         if act == "h":
             if hostelReceptionStage == 2:
-                call EP1_hostelAfterJail_Perry_dialogue7() from _call_hostelAfterJail_Perry_dialogue7
+                call EP1_hostelAfterJail_Perry_dialogue7() from _ep1call_hostelAfterJail_Perry_dialogue7
                 return
 
             perry "Эй! Не трогай мои коробки!"

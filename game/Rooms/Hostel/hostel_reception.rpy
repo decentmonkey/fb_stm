@@ -1,4 +1,4 @@
-default hostelReceptionStage = 0
+#default hostelReceptionStage = 0
 default hostelReceptionMonicaSuffix = 1
 default hostelReceptionPerrySuffix = 1
 

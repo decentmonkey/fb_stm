@@ -82,7 +82,7 @@ label EP1_wardrobe(name, obj_data):
                         $ EP1_autorun_to_object("floor1_stairs", "EP1_floor1_no_julia")
                         call EP1_question_helper_enable("EP1_question_helper_hairdye_find_julia")
 
-                        call EP1_julia_scene_basement1() from _call_julia_scene_basement1
+                        call EP1_julia_scene_basement1() from _ep1call_julia_scene_basement1
 
                         return
 

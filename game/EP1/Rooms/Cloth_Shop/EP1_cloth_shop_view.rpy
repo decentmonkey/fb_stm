@@ -667,7 +667,7 @@ label EP1_cloth_shop_dressing_room2_teleport(obj_name, obj_data):
             "В конце концов, не зря же я пересилила себя и зашла в эту грязную вонючую примерочную!"
             "Вдруг платье подойдет мне?"
             return
-        call EP1_change_scene("cloth_shop_dressing_room") from _call_change_scene_118
+        call EP1_change_scene("cloth_shop_dressing_room") from _ep1call_change_scene_118
         return
     return
 label EP1_cloth_shop_dressing_room2_environment(obj_name, obj_data):

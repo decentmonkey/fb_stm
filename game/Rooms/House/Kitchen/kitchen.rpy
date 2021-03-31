@@ -1,4 +1,4 @@
-default monicaKitchenForbidden = True
+#default monicaKitchenForbidden = True
 
 label kitchen:
     $ print "enter_kitchen"

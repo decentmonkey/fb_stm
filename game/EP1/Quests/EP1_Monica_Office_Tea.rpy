@@ -297,7 +297,7 @@ label EP1_monica_office_tea_talk2:
 
     $ monicaOfficeDay2PhoneLost = True
     $ EP1_autorun_to_object("monica_office_secretary", "monica_office_tea_secretary_searching_phone")
-    call EP1_refresh_scene_fade() from _call_refresh_scene_fade_204
+    call EP1_refresh_scene_fade() from _ep1call_refresh_scene_fade_204
     return
 
 label EP1_monica_office_tea_secretary_searching_phone:

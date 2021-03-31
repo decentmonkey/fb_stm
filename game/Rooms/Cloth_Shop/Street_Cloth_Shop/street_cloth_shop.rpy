@@ -1,4 +1,4 @@
-default s2ClothShopStage = 0
+#default s2ClothShopStage = 0
 
 label street_cloth_shop:
 

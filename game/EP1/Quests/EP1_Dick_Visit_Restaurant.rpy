@@ -431,7 +431,7 @@ label EP1_dick_meeting1_restaurant_dialogue2_neighbor_a():
     label EP1_dick_meeting1_restaurant_dialogue2_neighbor_a_menu_loop3:
     menu:
         "Дик! Он полностью сломал мне забор!" if neighborOffended4 == True:
-            call EP1_dick_meeting1_restaurant_dialogue2_neighbor_b() from _call_dick_meeting1_restaurant_dialogue2_neighbor_b
+            call EP1_dick_meeting1_restaurant_dialogue2_neighbor_b() from _ep1call_dick_meeting1_restaurant_dialogue2_neighbor_b
             return
         "Дик! Он полностью сломал мне забор! (disabled)" if neighborOffended4 == False:
             jump EP1_dick_meeting1_restaurant_dialogue2_neighbor_a_menu_loop3
@@ -488,7 +488,7 @@ label EP1_dick_meeting1_restaurant_dialogue2_neighbor_b():
     label EP1_dick_meeting1_restaurant_dialogue2_neighbor_b_menu_loop1:
     menu:
         "Я закатила ему иск!" if neighborOffended5 == False:
-            call EP1_dick_meeting1_restaurant_dialogue2_neighbor_c() from _call_dick_meeting1_restaurant_dialogue2_neighbor_c
+            call EP1_dick_meeting1_restaurant_dialogue2_neighbor_c() from _ep1call_dick_meeting1_restaurant_dialogue2_neighbor_c
             return
         "Я закатила ему иск! (disabled)" if neighborOffended5 == True:
             jump EP1_dick_meeting1_restaurant_dialogue2_neighbor_b_menu_loop1

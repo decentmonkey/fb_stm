@@ -1,6 +1,6 @@
-default ralphLocation = "none"
-default ralphStage = 0
-default ralphAskedAboutPayment = False
+#default ralphLocation = "none"
+#default ralphStage = 0
+#default ralphAskedAboutPayment = False
 
 label ralphInteract1:
     if act == "l":
