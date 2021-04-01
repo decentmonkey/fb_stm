@@ -1,5 +1,5 @@
-default bardieLocation = "none"
-default monicaBardieOffended1 = False
+#default bardieLocation = "none"
+#default monicaBardieOffended1 = False
 default bardieMonicaCleaningInteractFirstTime = True
 default bardieHeardAboutMarcus = False
 default bardieBlackmailStage = 0

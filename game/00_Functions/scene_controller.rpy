@@ -73,7 +73,11 @@ label show_scene_now:
     $ image_screen_scene_flag = True
     call map_street_scene_visibility_check() from _call_map_street_scene_visibility_check
     show screen hud_screen(hud_presets[hud_preset_current])
-    show screen hud_minimap(miniMapData)
+    if EP1 == True:
+        show screen EP1_hud_minimap(miniMapData)
+    else:
+        show screen hud_minimap(miniMapData)
+
     if rain == True and sceneIsStreet == True:
         show screen Rain
         stop music fadeout 1.0
@@ -116,14 +120,29 @@ label show_scene_now:
     if scene_refresh_flag == True:
         jump show_scene
 
-    if scenes_data["autorun"].has_key(scene_name) and scenes_data["autorun"][scene_name].has_key("scene"):
-        $ autorunFunc = scenes_data["autorun"][scene_name]["scene"]
-        $ del scenes_data["autorun"][scene_name]["scene"]
-        show screen sprites_hover_dummy_screen()
-        call expression autorunFunc from _call_expression_6
-#        hide screen sprites_hover_dummy_screen
-        $ scene_refresh_flag = True
-        jump show_scene
+    if EP1 == True:
+        if scenes_data["autorun"].has_key(scene_name):
+            $ autorunFunc = scenes_data["autorun"][scene_name]
+            $ del scenes_data["autorun"][scene_name]
+            show screen sprites_hover_dummy_screen()
+            if renpy.has_label("EP1_" + autorunFunc):
+                $ autorunFunc = "EP1_" + autorunFunc
+            call expression autorunFunc from _ep1_call_expression_7
+            $ scene_refresh_flag = True
+            jump show_scene
+
+    if EP1 == False:
+        if scenes_data["autorun"].has_key(scene_name) and scenes_data["autorun"][scene_name].has_key("scene"):
+            $ autorunFunc = scenes_data["autorun"][scene_name]["scene"]
+            $ del scenes_data["autorun"][scene_name]["scene"]
+            show screen sprites_hover_dummy_screen()
+            if EP1==True:
+                if renpy.has_label("EP1_" + autorunFunc):
+                    $ autorunFunc = "EP1_" + autorunFunc
+            call expression autorunFunc from _call_expression_6
+    #        hide screen sprites_hover_dummy_screen
+            $ scene_refresh_flag = True
+            jump show_scene
 
 
 
@@ -134,11 +153,20 @@ label show_scene_loop:
     $ interact_data = ui.interact()
     if interact_data != None and interact_data != False:
         if interact_data[0] == "process_object_click":
-            call process_object_click(interact_data[1], interact_data[2], interact_data[3]) from _rcall_sprites_action1
+            if EP1 == False:
+                call process_object_click(interact_data[1], interact_data[2], interact_data[3]) from _rcall_sprites_action1
+            else:
+                call EP1_process_object_click(interact_data[1], interact_data[2], interact_data[3]) from _ep1_rcall_sprites_action1
         if interact_data[0] == "process_object_click_alternate_action":
-            call process_object_click_alternate_action(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _rcall_sprites_action2
+            if EP1 == False:
+                call process_object_click_alternate_action(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _rcall_sprites_action2
+            else:
+                call EP1_process_object_click_alternate_action(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _ep1_rcall_sprites_action2
         if interact_data[0] == "process_object_click_alternate_inventory":
-            call process_object_click_alternate_inventory(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _rcall_sprites_action3
+            if EP1 == False:
+                call process_object_click_alternate_inventory(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _rcall_sprites_action3
+            else:
+                call EP1_process_object_click_alternate_inventory(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _ep1_rcall_sprites_action3
         if interact_data[0] == "time_management_street_wait_until_evening":
             call time_management_street_wait_until_evening() from _rcall_sprites_action4
         if interact_data[0] == "show_questlog":
@@ -148,13 +176,25 @@ label show_scene_loop:
         if interact_data[0] == "question_helper_call":
             call question_helper_call() from _rcall_sprites_action6
         if interact_data[0] == "map_show":
-            call map_show() from _rcall_sprites_action7
+            if EP1 == False:
+                call map_show() from _rcall_sprites_action7
+            else:
+                call EP1_map_show() from _ep1_rcall_sprites_action7
         if interact_data[0] == "call_hook":
+
             call call_hook(interact_data[1], interact_data[2]) from _rcall_sprites_action8
         if interact_data[0] == "miniMapHouseGenerateTeleport":
-            call miniMapHouseGenerateTeleport(interact_data[1], interact_data[2]) from _rcall_sprites_action9
+            if EP1 == False:
+                call miniMapHouseGenerateTeleport(interact_data[1], interact_data[2]) from _rcall_sprites_action9
+            else:
+                call EP1_miniMapHouseGenerateTeleport(interact_data[1], interact_data[2]) from _ep1_rcall_sprites_action9
+
         if interact_data[0] == "miniMapDisabled":
-            call miniMapDisabled(interact_data[1], interact_data[2]) from _rcall_sprites_action10
+            if EP1 == False:
+                call miniMapDisabled(interact_data[1], interact_data[2]) from _rcall_sprites_action10
+            else:
+                call EP1_miniMapDisabled(interact_data[1], interact_data[2]) from _ep1_rcall_sprites_action10
+
         if interact_data[0] == "show_achievements":
             call show_achievements() from _rcall_sprites_action11
         if interact_data[0] == "time_management_street_fast_sleep":
@@ -207,8 +247,12 @@ label change_scene(new_scene_name, in_transition_name="Fade", in_sound_name="hig
     return
 
 label refresh_scene(fade_param = False):
+
     if fade_param != False:
         $ scene_transition = fade_param
+
+    if EP1 == True:
+        jump EP1_refresh_scene
 
     if sceneSpriteSurfacesCacheSceneName != scene_name:
         $ sceneSpriteSurfacesCacheIdle = {}
@@ -242,12 +286,12 @@ label remove_dialogue():
 
 label after_load():
 #    $ renpy.free_memory()
-    if episode2part > 1:
-        img black_screen
-        help "Please use the newer version of the game."
-#        help "Пожалуйста, используйте для загрузки более новую версию игры!"
-        $ MainMenu(confirm=False)()
-        return
+#    if episode2part > 1:
+#        img black_screen
+#        help "Please use the newer version of the game."
+##        help "Пожалуйста, используйте для загрузки более новую версию игры!"
+#        $ MainMenu(confirm=False)()
+#        return
 
     $ list_files_active = True
     $ refresh_list_files ()
@@ -267,38 +311,38 @@ label after_load():
         show screen screen_sprites(scene_data)
     $ after_load_ready_to_render = True
 
-#    $ refresh_list_files_forced()
-    if episode < 2:
-        call start_saved_game() from _call_start_saved_game
-        return
+##    $ refresh_list_files_forced()
+#    if episode < 2:
+#        call start_saved_game() from _call_start_saved_game
+#        return
 
-    if bardieCensored == False:
-        img black_screen
-        help "This game version is incompatible with this save file. Please, start new game."
-#        help "Пожалуйста, используйте для загрузки более новую версию игры!"
-        $ MainMenu(confirm=False)()
-        return
+#    if bardieCensored == False:
+#        img black_screen
+#        help "This game version is incompatible with this save file. Please, start new game."
+##        help "Пожалуйста, используйте для загрузки более новую версию игры!"
+#        $ MainMenu(confirm=False)()
+#        return
 
-    if patch32applied == False:
-        $ remove_hook("map_teleport", "hook_basement_bedroom_check_exit_cloth_map", scene="global")
-        $ add_hook("map_teleport", "hook_basement_bedroom_check_exit_cloth_map", scene="global", priority=1000)
-        $ patch32applied = True
+#    if patch32applied == False:
+#        $ remove_hook("map_teleport", "hook_basement_bedroom_check_exit_cloth_map", scene="global")
+#        $ add_hook("map_teleport", "hook_basement_bedroom_check_exit_cloth_map", scene="global", priority=1000)
+#        $ patch32applied = True
     if game_version1_screen_ready_to_render == False:
         $ game_version1_screen_ready_to_render = True
         call refresh_scene() from _call_refresh_scene_2
-    if ep23_quests_initialized == False:
-        call ep23_Quests_init() from _call_ep23_Quests_init
-    if ep24_quests_initialized == False:
-        call ep24_quests_init() from _call_ep24_quests_init
-    call ep24_quests_fix() from _call_ep24_quests_fix
-    if ep26_quests_initialized == False:
-        call ep26_quests1() from _call_ep26_quests1
-    if ep27_quests_initialized == False:
-        call ep27_quests1() from _call_ep27_quests1
-    call process_afterload() from _call_process_afterload
+#    if ep23_quests_initialized == False:
+#        call ep23_Quests_init() from _call_ep23_Quests_init
+#    if ep24_quests_initialized == False:
+#        call ep24_quests_init() from _call_ep24_quests_init
+#    call ep24_quests_fix() from _call_ep24_quests_fix
+#    if ep26_quests_initialized == False:
+#        call ep26_quests1() from _call_ep26_quests1
+#    if ep27_quests_initialized == False:
+#        call ep27_quests1() from _call_ep27_quests1
+#    call process_afterload() from _call_process_afterload
 
     $ imagesSizesCache = {}
-    call run_after_load() from _call_run_after_load
+#    call run_after_load() from _call_run_after_load
     return
     $ scene_refresh_flag = True #???
     $ show_scene_loop_flag = True

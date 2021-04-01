@@ -1,4 +1,4 @@
-default dickOfficeCabinetStage = 0
+#default dickOfficeCabinetStage = 0
 
 default dickOfficeMonicaState = 2
 default dickOfficeDickState = 4

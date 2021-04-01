@@ -1,4 +1,4 @@
-default hostel_edge_1_a_visited = False
+#default hostel_edge_1_a_visited = False
 
 default monicaHostelEdge1ASuffix = ""
 default monicaHostelEdge1ASuffixOneTime = False

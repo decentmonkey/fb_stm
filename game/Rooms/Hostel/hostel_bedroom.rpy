@@ -1,4 +1,4 @@
-default hostelBedroomStage = 0
+#default hostelBedroomStage = 0
 default hostelBedroomMonicaSuffix = 1
 default hostelBedroomWhore1Suffix = 1
 label hostel_bedroom:

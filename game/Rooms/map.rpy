@@ -1,21 +1,21 @@
-default map_source_scene = ""
-default map_source_scene_hud_preset = ""
-default map_scene = "House"
+#default map_source_scene = ""
+#default map_source_scene_hud_preset = ""
+#default map_scene = "House"
 default previous_map_scene = ""
-default target_map_scene = ""
-default movingByCar = True
-default visitedPlaces = {}
-default mapFocusedObjects = []
-default mapChangedFlag = True
-default map_hud_preset_current = "map"
-default mapStreetCheckShowing = False
+#default target_map_scene = ""
+#default movingByCar = True
+#default visitedPlaces = {}
+#default mapFocusedObjects = []
+#default mapChangedFlag = True
+#default map_hud_preset_current = "map"
+#default mapStreetCheckShowing = False
 
-default mapSubstMonicaOfficeToSteve = False
-default mapSubstClothingShopToStreetCorner = False
-default mapSubstMonicaOfficeToPolice = False
-default teleportDickOfficeEveningFlag = False
-default teleportDickOfficeHeavyRainFlag = False
-default teleportHomeFredBlowjobFlag = False
+#default mapSubstMonicaOfficeToSteve = False
+#default mapSubstClothingShopToStreetCorner = False
+#default mapSubstMonicaOfficeToPolice = False
+#default teleportDickOfficeEveningFlag = False
+#default teleportDickOfficeHeavyRainFlag = False
+#default teleportHomeFredBlowjobFlag = False
 default mapTeleportForcedCarSound = False
 
 init python:

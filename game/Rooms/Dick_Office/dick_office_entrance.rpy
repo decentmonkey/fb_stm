@@ -1,4 +1,4 @@
-default dickReceptionStage = 0
+#default dickReceptionStage = 0
 default dickReceptionMonicaSuffix = 1
 
 label dick_office_entrance:

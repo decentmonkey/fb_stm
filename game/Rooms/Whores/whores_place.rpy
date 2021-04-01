@@ -1,4 +1,4 @@
-default whoresPlacePreviousLocation = ""
+#default whoresPlacePreviousLocation = ""
 default streetWhoresPlacePerrySuffix = 1
 default street_whores_perry_active = False
 

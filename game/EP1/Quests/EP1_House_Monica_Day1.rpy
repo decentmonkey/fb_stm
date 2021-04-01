@@ -1,0 +1,35 @@
+default juliaPunishedChecked = False
+
+label EP1_quest_house_monica_day1_evening_init:
+    $ EP1_autorun_to_object("floor1", "quest_house_monica_day1_evening1")
+    return
+
+label EP1_quest_house_monica_day1_evening1:
+    $ add_objective("dress_homecloth", t_("Одеть домашнюю одежду"), c_blue, 0)
+    $ add_objective("take_bath", t_("Принять душ"), c_green, 1)
+    $ add_objective("eat", t_("Поужинать"), c_orange, 2)
+    $ add_objective("sleep", t_("Лечь спать"), c_orange, 4)
+    $ EP1_subst_to_object("Wardrobe", False)
+    $ houseOutMode = "evening"
+    $ bathTakenJust = False
+    $ bathTaken = False
+    $ monicaEated = False
+#    $ juliaPunished = False #debug
+#    $ juliaPunishedLow = True #debug
+#    $ juliaMonicaLied = False #debug
+#    $ juliaPunishedVoluntarily = True #debug
+#    $ juliaMonicaYell = False #debug
+#    $ juliaPunishedNone = True #debug
+#    $ juliaLocation = "floor1" #debug
+    m "Мне надо переодеться."
+    "Поесть."
+    "Принять ванну и ложиться спать."
+
+    $ miniMapEnabledOnly = []
+
+    if juliaPunished == True:
+        m "Да, и еще надо проверить эту гувернантку!"
+        "Как там поживает пятно на ковре?!"
+        $ juliaPunishedChecked = False
+        $ add_objective("julia_check_spot", t_("Проверить Юлию"), c_red, 3)
+    return

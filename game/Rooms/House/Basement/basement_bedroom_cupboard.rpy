@@ -1,4 +1,4 @@
-default basementBedroom2CupboardReturnScene = False
+#default basementBedroom2CupboardReturnScene = False
 
 label basement_bedroom2_cupboard:
     $ print "enter_basement_bedroom2_cupboard"

@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "EP2.1-v16-Extra"
+define config.version = "EP1+EP2.1-Steam-Extra"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
