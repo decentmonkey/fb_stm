@@ -46,15 +46,12 @@ default EP1 = False
 default EP1_skipintro = False
 
 label start:
-<<<<<<< HEAD
-=======
     imgfl scene_Map_Evening
     menu:
         "Episode 1":
             jump EP1_start
         "Episode 2":
             pass
->>>>>>> join_EP1_Method2
     #new game
 
 label startfromep1:
