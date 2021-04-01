@@ -57,11 +57,6 @@ default monicaMustNotWearPanties = False
 default monicaLaundryBettyPantiesSelectMode = 0
 default monicaLaundryBettyPantiesSelectNudeDisabled = False
 
-default notWantToBasement = True
-
-default monicaFredWasForcedBlowjob = False
-default monicaFredWasSpermEat = False
-
 label monicaEat: #кормим Монику
     $ monicaEatedLastDay = day #кормим Монику
     $ monicaEatedLastDayTime = day_time

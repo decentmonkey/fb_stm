@@ -1,8 +1,6 @@
 default clothShopMusicType = 1
 
 label cloth_shop_view1:
-    if EP1 == True:
-        jump cloth_shop_view1_EP1
     $ print "enter_cloth_shop_view1"
     $ miniMapData = []
 
@@ -14,8 +12,6 @@ label cloth_shop_view1:
     return
 
 label cloth_shop_view1_init:
-    if EP1 == True:
-        return
     $ add_object_to_scene("Monica", {"type":2, "base":"Cloth_Shop_View1_Monica_[cloth]", "click" : "cloth_shop_view1_environment", "actions" : "l", "zorder" : 10}, scene="cloth_shop_view1")
 
     $ add_object_to_scene("Shop_Visitor1", {"type":2, "base":"Cloth_Shop_View1_v1", "click" : "cloth_shop_view1_environment", "actions" : "lt", "zorder" : 5, "icon_t":"/Icons/talk" + res.suffix +".png", "group":"cloth_shop_visitors"}, scene="cloth_shop_view1")
@@ -31,8 +27,6 @@ label cloth_shop_view1_init:
 
     return
 label cloth_shop_view1_teleport:
-    if EP1 == True:
-        jump cloth_shop_view1_teleport_EP1
     if obj_name == "Teleport_View2":
         call change_scene("cloth_shop_view2") from _call_change_scene_267
         return
@@ -55,8 +49,6 @@ label cloth_shop_view1_teleport:
     return
 
 label cloth_shop_view1_environment:
-    if EP1 == True:
-        jump cloth_shop_view1_environment_EP1
     if obj_name == "Monica":
         mt "Дешевый магазин, Фи!"
 
