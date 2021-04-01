@@ -106,7 +106,7 @@ label EP1_marcus_cabinet_dialogue3:
     m "Что?????"
     img 2117
     w
-    stop music fadeout 1.0
+    music stop
     $ renpy.pause(1)
     sound snd_handcuffs
     call textonblack(t_("ЧТО?????"))

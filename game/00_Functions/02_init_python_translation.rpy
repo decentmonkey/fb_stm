@@ -1,7 +1,8 @@
 python early:
     language_dict = json.loads(renpy.file("language_dict.json").read())
 #    language_dict = renpy.file("language_dict.json").read()
-    language_fields = {None:1, "english":2, "german":3, "spain":4, "chinese":5, "french":6, "turkish":7, "italian":8}
+#    language_fields = {None:1, "english":2, "german":3, "spain":4, "chinese":5, "french":6, "turkish":7, "italian":8}
+    language_fields = {None:1, "english":2, "german":3, "spanish":4, "chinese":5, "french":6, "turkish":7, "italian":8}
 
     language_credits = {
         "english": "Thanks for the English translation to\n[Aesthetic Dialectic] & [bambam]",
@@ -9,6 +10,21 @@ python early:
         "french": "Thanks for the French translation to\n[YoyoRTx]",
         "None": "Thanks for the Russian proofread to\n[Ms. Mansfield] & [EraRamp]"
     }
+
+    def clean_translation():
+        global language_dict, scenes_data
+        language_dict = {}
+        scenes_data = {"objects": {}, "substs" : {}, "autorun": {}, "hooks": {}}
+        print "save hook!"
+
+    def translation_load_EP1():
+        global language_dict
+        language_dict = json.loads(renpy.file("language_dict_EP1.json").read())
+        return
+    def translation_load_EP2():
+        global language_dict
+        language_dict = json.loads(renpy.file("language_dict.json").read())
+        return
 
 #    open(config.basedir + "/game/update_data.json", "wb").write(str)
     def parse_tstr(str1):

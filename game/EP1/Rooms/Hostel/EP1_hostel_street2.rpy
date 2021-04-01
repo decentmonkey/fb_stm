@@ -8,7 +8,7 @@ label EP1_hostel_street2:
     $ clear_scene_from_objects(scene_name)
 
 
-    $ scene_image = "scene_hostel_street2" + day_suffix
+    $ scene_image = "scene_hostel_street_door" + day_suffix
 
     $ EP1_add_object_to_scene("Teleport_hostel_reception", {"type":2, "base":"Hostel_Street2_Door", "click" : "EP1_hostel_street2_teleport", "actions" : "lw", "zorder" : 0, "b":0.13, "tint":[1.0, 1.0, 0.7]})
     $ EP1_add_object_to_scene("Poster", {"type":2, "base":"Hostel_Street2_Poster", "click" : "EP1_hostel_street2_environment", "actions" : "l", "zorder" : 0, "b":0.13, "tint":[1.0, 1.0, 0.7]})

@@ -575,7 +575,7 @@ label EP1_hostelAfterJail_bedroom_sleep1:
 
     scene black_screen
     with Dissolve(1)
-    stop music fadeout 1.0
+    music stop
     call textonblack_long("УТРО")
     scene black_screen
     with Dissolve(1)
@@ -673,9 +673,10 @@ label EP1_hostelAfterJail_bedroom_dialogue7:
 
     $ gameStage = 3
     $ gameSubStage = 0
+    $ map_enabled = False
 
     $ EP1_subst_to_object("Teleport_Hostel_Street", False)
-    $ EP1_autorun_to_object("EP1_hostel_street", "EP1_hostelAfterJail_street_dialogue1")
+    $ EP1_autorun_to_object("hostel_street", "EP1_hostelAfterJail_street_dialogue1")
     call EP1_change_scene("EP1_hostel_street", "Fade", "snd_walk_barefoot")
     return
 
@@ -813,11 +814,12 @@ label EP1_hostelAfterJail_street_dialogue2(o, d):
 #    $ renpy.music.stop("rain")
     $ remove_objective("find_place_to_take_cloth")
     $ EP1_subst_to_object("Teleport_Shawarma", "EP1_hostelAfterJail_street_dialogue2")
-    $ EP1_autorun_to_object("EP1_whores_place_shawarma_s2", "EP1_hostelAfterJail_street_dialogue5")
-    $ EP1_autorun_to_object("EP1_hostel_street", "EP1_hostelAfterJail_street_dialogue4a")
+    $ EP1_autorun_to_object("whores_place_shawarma_s2", "EP1_hostelAfterJail_street_dialogue5")
+    $ EP1_autorun_to_object("hostel_street", "EP1_hostelAfterJail_street_dialogue4a")
     $ add_objective("steal_cloth", t_("Украсть в магазине одежды новое платье!"), c_blue, 10)
     $ map_enabled = False
 
+#    $ EP1_whores_place_shawarma_s2_crossroad_blocked = True
     $ EP1_subst_to_object("Teleport_Shawarma", False)
     $ gameSubStage = 1
     $ cloth = "Whore"
@@ -935,11 +937,12 @@ label EP1_hostelAfterJail_street_dialogue4:
 #    $ renpy.music.stop("rain")
     $ remove_objective("find_place_to_take_cloth")
     $ EP1_subst_to_object("Teleport_Shawarma", "EP1_hostelAfterJail_street_dialogue2")
-    $ EP1_autorun_to_object("EP1_whores_place_shawarma_s2", "EP1_hostelAfterJail_street_dialogue5")
-    $ EP1_autorun_to_object("EP1_hostel_edge_1_a", "EP1_hostelAfterJail_street_dialogue4a")
+    $ EP1_autorun_to_object("whores_place_shawarma_s2", "EP1_hostelAfterJail_street_dialogue5")
+    $ EP1_autorun_to_object("hostel_edge_1_a", "EP1_hostelAfterJail_street_dialogue4a")
     $ add_objective("steal_cloth", t_("Украсть в магазине одежды новое платье!"), c_blue, 10)
     $ map_enabled = False
 
+#    $ EP1_whores_place_shawarma_s2_crossroad_blocked = True
     $ EP1_subst_to_object("Teleport_Shawarma", False)
     $ gameSubStage = 1
     $ cloth = "Whore"
@@ -973,7 +976,7 @@ label EP1_hostelAfterJail_street_dialogue5:
     $ renpy.music.set_pause(False, "rain")
     $ EP1_autorun_to_object("EP1_whores_place_s2", "EP1_hostelAfterJail_street_dialogue6")
     $ EP1_autorun_to_object("EP1_street_cloth_shop_s2", "EP1_hostelAfterJail_street_dialogue7")
-    call EP1_change_scene("whores_place")
+    call EP1_change_scene("street_cloth_shop")
     return
 
 label EP1_hostelAfterJail_street_dialogue6:

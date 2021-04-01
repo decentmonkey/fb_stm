@@ -1006,7 +1006,7 @@ label EP1_dick_meeting1_restaurant_dialogue3_models():
 #
 
 label EP1_dick_meeting1_restaurant_dialogue4_waitress():
-    stop music fadeout 1.0
+    music stop
     sound plastinka
 #          img 1421
     "Но я хотела бы вам напомнить, что мы скоро закрываемся."

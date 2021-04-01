@@ -2419,6 +2419,7 @@ screen file_slots(title):
 
                     button:
                         action [
+#                            clean_translation,
                             FileAction(slot),
                         ]
 

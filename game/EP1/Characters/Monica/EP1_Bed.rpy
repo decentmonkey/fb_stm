@@ -35,7 +35,7 @@ label EP1_check_sleep:
                 m "Я уже устала.
                 Пора ложиться спать..."
                 $ remove_objective("sleep")
-                stop music fadeout 1.0
+                music stop
                 img 1010
                 with fadelong
                 $ renpy.pause(2)
@@ -66,7 +66,7 @@ label EP1_check_sleep:
                 m "Я уже устала.
                 Пора ложиться спать..."
                 $ remove_objective("sleep")
-                stop music fadeout 1.0
+                music stop
                 img 1010
                 with fadelong
                 $ renpy.pause(2)

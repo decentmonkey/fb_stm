@@ -41,7 +41,7 @@ label EP1_hostel_bathroom_toilet_environment(obj_name, obj_data):
                 mt "Я уже писала только что..."
                 return
             if hostelBathroomStage == 0:
-                stop music fadeout 0.2
+                music stop
                 sound snd_piss
                 img 5631
                 with fadelong
@@ -51,7 +51,7 @@ label EP1_hostel_bathroom_toilet_environment(obj_name, obj_data):
                 $ hostelBathroomPissed = True
                 return
             if hostelBathroomStage == 1:
-                stop music fadeout 0.2
+                music stop
                 sound snd_piss
                 img 5632
                 with fadelong

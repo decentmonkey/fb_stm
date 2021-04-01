@@ -12,7 +12,7 @@ label EP1_dick_office_entrance:
     if dickReceptionStage == 0 or dickReceptionStage == 2 or dickReceptionStage == 3 or dickReceptionStage == 4:
         $ scene_image = "scene_Office_Dick_Entrance_Monica_Reception_AfterJail_1"
         $ EP1_add_object_to_scene("Monica", {"type":2, "base":"Office_Dick_Entrance_Monica_Reception_AfterJail_1_Monica", "click" : "EP1_dick_office_entrance_environment", "actions" : "l", "zorder" : 10})
-        $ EP1_add_object_to_scene("Reception", {"type":2, "base":"Office_Dick_Entrance_Monica_Reception_AfterJail_1_Reception", "click" : "EP1_dick_office_entrance_environment", "actions" : "lt", "zorder" : 10})
+        $ EP1_add_object_to_scene("Reception", {"type":2, "base":"Office_Dick_Entrance_Monica_Reception_AfterJail_2_Reception", "click" : "EP1_dick_office_entrance_environment", "actions" : "lt", "zorder" : 10})
     if dickReceptionStage == 1:
         $ scene_image = "scene_Office_Dick_Entrance_Monica_Reception_AfterJail_2"
         $ EP1_add_object_to_scene("Monica", {"type":2, "base":"Office_Dick_Entrance_Monica_Reception_AfterJail_2_Monica", "click" : "EP1_dick_office_entrance_environment", "actions" : "l", "zorder" : 10})

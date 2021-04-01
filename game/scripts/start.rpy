@@ -43,6 +43,7 @@ default episode2part = 1
 default bardieCensored = False
 
 default EP1 = False
+default EP1_skipintro = False
 
 label start:
     menu:
@@ -51,25 +52,30 @@ label start:
         "Episode 2":
             pass
     #new game
+
+label startfromep1:
     $ EP1 = False
+    $ translation_load_EP2()
     $ bardieCensored = True
     $ after_load_ready_to_render = True
     $ refresh_list_files_forced()
     $ episode = 2
 #    $ debugMode = True
 
-    $ cloth_type = "Nude"
-    $ cloth = "Nude"
-    $ bitchmeterValue = 280
     $ scenes_data = {"objects": {}, "substs" : {}, "autorun": {}, "hooks": {}}
     $ hooks_stack = []
     $ inventory_objects = {}
     $ inventory = []
+    $ objectives_list = []
 
-
-    call intro_questions() from _call_intro_questions
-    $ ralphAskedAboutPayment = False
-    $ add_objective("ask_ralph", t_("Узнать у Ральфа по поводу оплаты"), c_orange, 13)
+    if EP1_skipintro == False:
+        $ cloth_type = "Nude"
+        $ cloth = "Nude"
+        $ bitchmeterValue = 280
+        call intro_questions() from _call_intro_questions
+        $ ralphAskedAboutPayment = False
+    if ralphAskedAboutPayment == False:
+        $ add_objective("ask_ralph", t_("Узнать у Ральфа по поводу оплаты"), c_orange, 13)
     $ add_objective("freedom", t_("Избежать наказания"), c_red, 0)
     call start_game() from _call_start_game
     return
@@ -325,7 +331,7 @@ label start_game:
     call textonblack_long("FASHION BUSINESS") from _call_textonblack_long
     scene black_screen
     with Dissolve(1)
-    call textonblack_long("NEW LIFE") from _call_textonblack_long_1
+    call textonblack_long("EPISODE 2: NEW LIFE") from _call_textonblack_long_1
     scene black_screen
     with Dissolve(1)
 #    $ _dismiss_pause = True

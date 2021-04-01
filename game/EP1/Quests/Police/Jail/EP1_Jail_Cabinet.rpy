@@ -320,7 +320,7 @@ label EP1_jail_cabinet_dialogue7:
     "Пожалуйста, отдыхайте."
     "Поговорим с Вами позже."
 
-    stop music fadeout 0.5
+    music stop
     sound man_steps
     img black_screen
     with Dissolve(1)
@@ -341,7 +341,7 @@ label EP1_jail_cabinet_dialogue7:
     overseer "Опять ты бардак развела!"
     "Одни проблемы от тебя!"
 
-    stop music fadeout 1.0
+    music stop
     call textonblack(t_("СПУСТЯ 15 МИНУТ..."))
     img black_screen
     with Dissolve(1)
@@ -416,7 +416,7 @@ label EP1_jail_cabinet_dialogue7:
     "Хе-хе!"
     "А пока я буду тренировать своего Жесткого Боба!"
 
-    stop music fadeout 1.0
+    music stop
     img black_screen
     with fade
     $ renpy.pause(2)

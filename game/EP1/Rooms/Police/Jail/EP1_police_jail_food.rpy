@@ -28,7 +28,7 @@ label EP1_police_jail_food_scene_environment(obj_name, obj_data):
         if act == "h":
             mt "Моника! Заставь себя! Иначе ты умрешь с голода!!!"
             sound snd_eating
-            stop music fadeout 1.0
+            music stop
             sound snd_eating
             call textonblack(t_("Спустя 5 минут..."))
             img black_screen
@@ -40,7 +40,7 @@ label EP1_police_jail_food_scene_environment(obj_name, obj_data):
                 $ jailFoodInteractlabelExec = "EP1_" + jailFoodInteractlabelExec
             call expression jailFoodInteractlabelExec
             call EP1_change_scene("EP1_police_jail_scene")
-            
+
             return
 
     return

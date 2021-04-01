@@ -223,7 +223,7 @@ label EP1_afterJailHouseFamily_dialogue3:
     mt "!!!!!!!"
     "СУЧКА!!!!!!"
 
-    stop music fadeout 1.0
+    music stop
     sound man_steps
     img black_screen
     with Dissolve(0.5)

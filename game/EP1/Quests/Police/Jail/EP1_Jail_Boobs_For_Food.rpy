@@ -164,7 +164,7 @@ label EP1_jail_boobs_for_food:
         img 5239
         with fade
         w
-        stop music
+        music stop
         sound Jump2
         img 5240
         with hpunch

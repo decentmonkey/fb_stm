@@ -10,7 +10,7 @@ label EP1_jail_day8:
     $ policeCellMonicalabel = "jail_day8_Monica"
     $ policeCellBedlabel = "jail_day8_Bed"
     $ policeCellCagelabel = "jail_day8_Cage"
-    stop music fadeout 1.0
+    music stop
     call textonblack(t_("ДЕНЬ 8"))
     img black_screen
     with Dissolve(1)
@@ -81,7 +81,7 @@ label EP1_jail_day8_Bed(obj_name, obj_data):
                 pass
             "Не ложиться":
                 return
-        stop music fadeout 1.0
+        music stop
         call textonblack(t_("Спустя некоторое время..."))
         music prison_yell_music
         img black_screen
@@ -312,7 +312,7 @@ label EP1_jail_day8_3:
     m "Сэр!"
     overseer "Хорошо, сейчас."
 
-    stop music fadeout 1.0
+    music stop
     call textonblack(t_("Спустя 5 минут..."))
     img black_screen
     with Dissolve(1)

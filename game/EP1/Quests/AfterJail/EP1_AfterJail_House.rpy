@@ -521,9 +521,9 @@ label EP1_afterJailHouse_dialogue19:
     return
 
 label EP1_afterJailHouse_dialogue20:
-    img black_screen
-    with Dissolve(1.0)
-    help "Вы можете безопасно сохраниться в этой локации для того, чтобы использовать сохранение в Эпизоде 2."
+#    img black_screen
+#    with Dissolve(1.0)
+#    help "Вы можете безопасно сохраниться в этой локации для того, чтобы использовать сохранение в Эпизоде 2."
     img 3374
     with fadelong
     mt "Вот где жила Юлия..."

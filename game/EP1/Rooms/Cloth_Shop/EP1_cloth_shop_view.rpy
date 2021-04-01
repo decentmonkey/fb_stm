@@ -1036,7 +1036,7 @@ label EP1_clothShopCheckFinalFitting2:
                 img 4350
                 w
                 sound snd_fabric1
-                stop music fadeout 1.0
+                music stop
                 img 4351
                 m "Упс!!!"
                 img 4352

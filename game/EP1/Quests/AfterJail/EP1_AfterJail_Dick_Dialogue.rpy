@@ -577,7 +577,7 @@ label EP1_dickAfterJail_secretary_dialogue5:
                     # переход
                     # день свадьбы
 
-                    stop music fadeout 1.0
+                    music stop
                     call textonblack(t_("Спустя некоторое время..."))
                     music tour_of_the_flowers
                     img black_screen

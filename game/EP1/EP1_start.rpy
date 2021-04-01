@@ -12,6 +12,7 @@ default homeVisited = False
 label EP1_start:
 #    jump credits
     $ EP1 = True
+    $ translation_load_EP1()
     $ lang = _preferences.language
     $ game_version1_screen_ready_to_render = True
     $ cloth_type = "Lingerie"

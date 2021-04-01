@@ -517,7 +517,7 @@ screen achievements_screen():
                 for i in range(0,len(cellsList)):
                     $ posX = i%cellsInRow * cellSizeX + rowOffset
                     $ posY = int(i/cellsInRow) * cellSizeY
-                    if get_achievement(cellsList[i][0]) == True or 1==1:           ##### убрать  'or 1==1' !!!
+                    if get_achievement(cellsList[i][0]) == True:           ##### убрать  'or 1==1' !!!
                         if len(cellsList[i]) >= 3 and cellsList[i][2] != False:
                             add "images/Achievements/ach_" + cellsList[i][0] + ".jpg":
                                 pos(posX, posY + curY)

@@ -66,7 +66,7 @@ label EP1_police_entrance_s2_teleport(obj_name, obj_data):
             $ richHotelReceptionistMode = 1
             $ cloth_type = "AfterJail"
             $ cloth = "AfterJail"
-            stop music fadeout 1.0
+            music stop
             $ changeDayTime("evening")
             $ EP1_autorun_to_object("street_police_s2", "entrance_dialogue8")
             $ EP1_autorun_to_object("cloth_shop_view1_s2", "after_jail_cloth_shop_enter")

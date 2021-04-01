@@ -87,7 +87,7 @@ label EP1_jail_cage:
                 img 5313
                 m "Как зовут нашего надзирателя?"
 #                sound prison_yell
-                stop music fadeout 1.0
+                music stop
                 music prison_yell_music
                 img 5112
                 prisoner1 "Ребята! Шлюха нас о чем-то спрашивает!"

@@ -79,7 +79,7 @@ label EP1_entrance_dialogue2:
             "Спрашивает мистера Маркуса."
             detective "Хорошо."
             "Сейчас подойду."
-            stop music fadeout 1.0
+            music stop
             call textonblack(t_("СПУСТЯ 5 МИНУТ..."))
             img black_screen
             with Dissolve(1)
@@ -138,7 +138,7 @@ label EP1_entrance_dialogue5:
     "Урод!"
     img 2083
     detective "..."
-    stop music fadeout 1.0
+    music stop
     call textonblack(t_("СПУСТЯ 5 МИНУТ..."))
     img black_screen
     with Dissolve(1)

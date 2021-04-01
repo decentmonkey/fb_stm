@@ -10,7 +10,7 @@ label EP1_jail_day4:
     $ policeCellMonicalabel = "jail_day4_Monica"
     $ policeCellBedlabel = "jail_day4_Bed"
     $ policeCellCagelabel = "jail_day4_Cage"
-    stop music fadeout 1.0
+    music stop
     call textonblack(t_("ДЕНЬ 4"))
     img black_screen
     with Dissolve(1)

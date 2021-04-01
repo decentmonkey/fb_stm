@@ -1080,11 +1080,11 @@ label EP1_julia_punished_talk_day3_day:
     w
     img 1999
     w
-    stop sound fadeout 1.0
+    music stop
     img 2000
     with fade
     w
-    stop music fadeout 1.0
+    music stop
     img 2001
     with fade
     w

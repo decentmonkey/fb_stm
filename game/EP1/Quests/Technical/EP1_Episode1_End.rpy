@@ -1,5 +1,5 @@
 label EP1_episode1End:
-    $ _dismiss_pause = False
+#    $ _dismiss_pause = False
     img black_screen
     with Dissolve(2.0)
     img 3371
@@ -10,13 +10,23 @@ label EP1_episode1End:
     "Я хочу спать..."
     img 3373
     with Dissolve(8.0)
-    show black at credits_black_overlay
-    call EP1_credits
-    $ renpy.pause(5.0, hard = True)
+#    show black at credits_black_overlay
+#    call EP1_credits
+    $ renpy.pause(3.0, hard = True)
+    pause
 #    hide screen show_image_screen
+    $ EP1_skipintro = True
+#    hide screen credits_screen
+    fadeblack 2.0
+
+
+#    $ cloth_type = "Nude"
+#    $ cloth = "GovernessPants"
+
+    jump startfromep1
     $ renpy.pause(gui.credits.timeout, hard=True)
 #    $ renpy.pause()
-    $ _dismiss_pause = True
+#    $ _dismiss_pause = True
     stop music fadeout 1.0
     $ renpy.full_restart(transition=Fade(1.0, 1.0, 1.0))
 #    help "the end"
@@ -24,7 +34,7 @@ label EP1_episode1End:
 
 label EP1_episode1End_Dick:
 #    music beautiful_messenger_piano
-    $ _dismiss_pause = False
+#    $ _dismiss_pause = False
     img 5765
     with Dissolve(5.0)
 #    $ renpy.pause(3.0)
@@ -35,7 +45,7 @@ label EP1_episode1End_Dick:
 #    hide screen show_image_screen
     $ renpy.pause(gui.credits.timeout, hard=True)
 #    $ renpy.pause()
-    $ _dismiss_pause = True
+#    $ _dismiss_pause = True
     stop music fadeout 1.0
     $ renpy.full_restart(transition=Fade(1.0, 1.0, 1.0))
     return

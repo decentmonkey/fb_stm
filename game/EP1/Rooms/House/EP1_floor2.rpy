@@ -63,7 +63,7 @@ label EP1_floor2:
             $ scene_image = "scene_Floor2_Monica_" + cloth + day_suffix
             $ EP1_add_object_to_scene("Monica", {"type" : 2, "base" : "Floor2_Monica_" + cloth + day_suffix, "click" : "EP1_floor2_environment", "actions" : "l", "zorder":10, "tint": monica_tint})
         $ EP1_add_object_to_scene("Spot", {"type" : 2, "base" : "Floor2_Spot", "click" : "EP1_floor2_environment", "actions" : "l", "zorder":10})
-        $ EP1_add_object_to_scene("Teleport_BedroomBardie", {"type":3, "text" : t_("КОМНАТА БАРДИ"), "larrow" : "arrow_left_2", "base":"Floor2_Teleport_BedroomBardie", "click" : "EP1_floor2_teleport", "xpos" : 341, "ypos" : 454, "zorder":11})
+#        $ EP1_add_object_to_scene("Teleport_BedroomBardie", {"type":3, "text" : t_("КОМНАТА БАРДИ"), "larrow" : "arrow_left_2", "base":"Floor2_Teleport_BedroomBardie", "click" : "EP1_floor2_teleport", "xpos" : 341, "ypos" : 454, "zorder":11})
         $ EP1_add_object_to_scene("Teleport_BedroomSecond", {"type":3, "text" : t_("СПАЛЬНЯ ДЛЯ ГОСТЕЙ"), "larrow" : "arrow_left_2", "base":"Floor2_Teleport_BedroomSecond", "click" : "EP1_floor2_teleport", "xpos" : 420, "ypos" : 916, "zorder":15, "b":0.15, "tint":[1.0, 1.0, 0.9]})
         $ EP1_add_object_to_scene("Teleport_Bedroom", {"type":3, "text" : t_("СПАЛЬНЯ ХОЗЯЕВ"), "larrow" : "arrow_down_2", "base":"Floor2_Teleport_Bedroom", "click" : "EP1_floor2_teleport", "xpos" : 1570, "ypos" : 1006, "zorder":11})
         $ EP1_add_object_to_scene("Teleport_Bathroom", {"type":3, "text" : t_("ВАННАЯ КОМНАТА"), "larrow" : "arrow_left_2", "base":"Floor2_Bathroom", "click" : "EP1_floor2_teleport", "xpos" : 350, "ypos" : 250, "zorder":15, "b":0.15, "tint":[1.0, 1.0, 0.9]})

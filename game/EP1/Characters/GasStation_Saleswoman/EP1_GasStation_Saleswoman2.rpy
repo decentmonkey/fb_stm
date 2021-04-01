@@ -1479,19 +1479,19 @@ label EP1_gas_saleswoman_dialogue2_getout5:
 
 
 label EP1_gas_saleswoman_dialogue2_2_out:
-    stop music fadeout 3.0
+    music stop
     scene black_screen
     with Dissolve(2)
     call EP1_gas_saleswoman_dialogue2_end()
     return
 label EP1_gas_saleswoman_dialogue2_2_out2:
-    stop music fadeout 3.0
+    music stop
     scene black_screen
     with Dissolve(2)
     call EP1_gas_saleswoman_dialogue2_end()
     return
 label EP1_gas_saleswoman_dialogue2_end:
-    stop music fadeout 3.0
+    music stop
     call EP1_quest_house_monica_day2_day_init()
     return
 

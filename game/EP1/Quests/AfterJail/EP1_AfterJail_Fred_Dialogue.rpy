@@ -253,7 +253,7 @@ label EP1_afterJailFredDialogue3:
     fred "Вы слышите меня, Мэм?"
     m "Да, я слышу, Фред..."
 
-    stop music fadeout 1.0
+    music stop
     img black_screen
     hide screen Rain_overlay
     with Dissolve(0.5)
@@ -286,7 +286,7 @@ label EP1_afterJailFredDialogue3:
     "О БОЖЕ!!!"
 
 
-    stop music fadeout 1.0
+    music stop
     img black_screen
     hide screen Rain_overlay
     with Dissolve(0.5)
@@ -334,7 +334,7 @@ label EP1_afterJailFredDialogue3:
     m "Конечно же я не хочу, Фред!"
     "И не буду!!!"
 
-    stop music fadeout 1.0
+    music stop
     img black_screen
     hide screen Rain_overlay
     with Dissolve(0.5)
@@ -646,7 +646,7 @@ label EP1_afterJailFredDialogue3:
     "ВЫ МЕНЯ СЛЫШИТЕ, МЭМ?!?!"
 
 
-    stop music fadeout 1.0
+    music stop
     img black_screen
     with Dissolve(0.5)
     sound snd_car_engine

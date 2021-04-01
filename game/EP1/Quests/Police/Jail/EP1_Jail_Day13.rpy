@@ -3,7 +3,7 @@ label EP1_jail_day13:
     $ day = day + 1
     $ jailDaySceneStage = 0
     $ jailScenePlace = 0
-    stop music fadeout 1.0
+    music stop
     call textonblack(t_("ДЕНЬ 13"))
     img black_screen
     with Dissolve(1)
@@ -92,7 +92,7 @@ label EP1_jail_day13:
     img 5495
     w
 
-    stop music fadeout 0.5
+    music stop
     img black_screen
     with Dissolve(1)
     sound man_steps
@@ -134,7 +134,7 @@ label EP1_jail_day13:
     overseer "Так точно, Мистер Маркус!"
 
     #В комнате допросов
-    stop music fadeout 1.0
+    music stop
     call textonblack(t_("СПУСТЯ 15 МИНУТ..."))
     img black_screen
     with Dissolve(1)

@@ -370,7 +370,7 @@ label EP1_after_jail_rich_hotel1:
     "Вы точно приехали на такси?"
     "Вы говорите правду?"
     img 2719
-    stop music fadeout 1.0
+    music stop
     m "Я..."
     "Я... Конечно...."
     img 2720
@@ -558,7 +558,7 @@ label EP1_after_jail_cloth_shop_enter:
     "..."
     "Мне надо что-то придумать!"
     "Может быть просто спрятаться от продавца, пока он не уйдет?"
-    $ EP1_autorun_to_object("EP1_cloth_shop_dressing_room2", "EP1_after_jail_cloth_shop_cashier4")
+    $ EP1_autorun_to_object("cloth_shop_dressing_room2", "EP1_after_jail_cloth_shop_cashier4")
     $ add_objective("hide_trader", t_("Прятаться от продавца, пока она не уйдет"), c_orange, 20)
     call EP1_refresh_scene_fade()
 
@@ -570,7 +570,7 @@ label EP1_after_jail_cloth_shop_cashier1:
     w
     img 2766
     cashier "Надо навести порядок перед утренней сменой..."
-    $ EP1_autorun_to_object("EP1_cloth_shop_view1_s2", "EP1_after_jail_cloth_shop_cashier2")
+    $ EP1_autorun_to_object("cloth_shop_view1_s2", "EP1_after_jail_cloth_shop_cashier2")
     call EP1_refresh_scene_fade()
     return
 
@@ -587,7 +587,7 @@ label EP1_after_jail_cloth_shop_cashier3:
 label EP1_after_jail_cloth_shop_cashier4:
     mt "Спрячусь здесь!"
     "Сюда она не должна зайти!"
-    stop music fadeout 1.0
+    music stop
     call textonblack(t_("СПУСТЯ 15 МИНУТ..."))
     img black_screen
     with Dissolve(1)
@@ -595,14 +595,14 @@ label EP1_after_jail_cloth_shop_cashier4:
     img 2767
     cashier "Весь товар выглядит опрятно."
     "Пойду домой."
-    $ EP1_autorun_to_object("EP1_cloth_shop_dressing_room2", "EP1_after_jail_cloth_shop_cashier5")
+    $ EP1_autorun_to_object("cloth_shop_dressing_room2", "EP1_after_jail_cloth_shop_cashier5")
     call EP1_refresh_scene_fade()
     return
 
 label EP1_after_jail_cloth_shop_cashier5:
     mt "Да скоро же эта сучка уйдет!!!"
     mt "Долго мне прятаться???"
-    $ EP1_autorun_to_object("EP1_cloth_shop_dressing_room", "EP1_after_jail_cloth_shop_cashier6")
+    $ EP1_autorun_to_object("cloth_shop_dressing_room", "EP1_after_jail_cloth_shop_cashier6")
     return
 
 label EP1_after_jail_cloth_shop_cashier6:
@@ -617,7 +617,7 @@ label EP1_after_jail_cloth_shop_cashier6:
     $ add_objective("eat_chocolate", t_("Съесть шоколадку!"), c_pink, 20)
     $ s2ClothShopStage = 2
     $ clothShopCashierAtCashDesk = False
-    $ EP1_autorun_to_object("EP1_cloth_shop_cashier", "EP1_after_jail_cloth_shop_cashier7")
+    $ EP1_autorun_to_object("cloth_shop_cashier", "EP1_after_jail_cloth_shop_cashier7")
     call EP1_refresh_scene_fade()
     return
 
@@ -817,7 +817,7 @@ label EP1_after_jail_cloth_shop_cashier9:
         menu:
             "Полиция придется как раз кстати! Ты, сучка!":
                 $ clothShopCashierFirstNightOffended = True
-                music Pyro_Flow;
+                music Pyro_Flow
                 img 2801
                 m "Кто вы?"
                 img 2802
@@ -835,7 +835,8 @@ label EP1_after_jail_cloth_shop_cashier9:
                 "Давай!"
 
 
-                stop music fadeout 0.2
+#                stop music fadeout 0.2
+                music stop
                 sound highheels_run2
                 img black_screen
                 with fadelong
@@ -869,7 +870,8 @@ label EP1_after_jail_cloth_shop_cashier9:
                 "МЕЛКАЯ СУЧКА!!!"
                 call EP1_bitch(5, "clothShopCashierFirstNightOffended")
 
-                stop music fadeout 0.2
+#                stop music fadeout 0.2
+                music stop
                 sound highheels_run2
                 img black_screen
                 with fadelong
@@ -1008,13 +1010,13 @@ label EP1_after_jail_cloth_shop_cashier9:
         $ remove_objective("look_dressroom")
         $ remove_objective("find_sleep")
         $ add_objective("dick_search", t_("Идти к Дику в офис."), c_blue, 5)
-        $ EP1_autorun_to_object("EP1_street_cloth_shop_s2", "EP1_afterJailDay2_clothShopStreet1")
+        $ EP1_autorun_to_object("street_cloth_shop_s2", "EP1_afterJailDay2_clothShopStreet1")
 
         $ s2ClothShopStage = 4
         $ clothShopCashierTalkStage = 2
         $ clothShopCashierAtCashDesk = True
         $ gameSubStage = 1
-        call EP1_change_scene("EP1_cloth_shop_view1_s2", "Fade", False)
+        call EP1_change_scene("cloth_shop_view1_s2", "Fade", False)
 
 #    scene black_screen
 #    with Dissolve(1)

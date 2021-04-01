@@ -10,7 +10,7 @@ label EP1_cloth_shop_view1_s2:
     $ scene_caption = t_("Clothing Shop")
     $ clear_scene_from_objects(scene_name)
 
-    $ scene_image = "scene_Cloth_Shop_View1"
+    $ scene_image = "scene_Cloth_Shop_View1_EP1"
 
     if s2ClothShopStage == 1:
         $ EP1_add_object_to_scene("Cloth1", {"type":2, "base":"Cloth_Shop_View1_Cloth1", "click" : "EP1_cloth_shop_view1_environment2", "actions" : "l", "zorder" : 0})
@@ -29,7 +29,7 @@ label EP1_cloth_shop_view1_s2:
 #        $ EP1_add_object_to_scene("Rack2", {"type":2, "base":"Cloth_Shop_View1_Rack2", "click" : "EP1_cloth_shop_view1_environment2", "actions" : "l", "zorder" : 0})
 
     $ EP1_add_object_to_scene("Teleport_Cashier", {"type":2, "base":"Cloth_Shop_View1_Cashier", "click" : "EP1_cloth_shop_view1_teleport2", "actions" : "lw", "zorder" : 0})
-    $ EP1_add_object_to_scene("Teleport_Dressing_Room", {"type":2, "base":"Cloth_Shop_View1_DressingRoom", "click" : "EP1_cloth_shop_view1_teleport2", "actions" : "lw", "zorder" : 0})
+    $ EP1_add_object_to_scene("Teleport_Dressing_Room", {"type":2, "base":"Cloth_Shop_View1_DressingRoom_EP1", "click" : "EP1_cloth_shop_view1_teleport2", "actions" : "lw", "zorder" : 0})
     $ EP1_add_object_to_scene("Teleport_View2", {"type":3, "text" : t_("ИДТИ ДАЛЬШЕ"), "rarrow" : "arrow_up_2", "base":"Cloth_Shop_View1_Teleport_View2", "click" : "EP1_cloth_shop_view1_teleport2", "xpos" : 183, "ypos" : 929, "zorder":11})
     $ EP1_add_object_to_scene("Teleport_Street_Cloth_Shop", {"type":3, "text" : t_("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "EP1_cloth_shop_view1_teleport2", "xpos" : 960, "ypos" : 956, "zorder":11})
 

@@ -11,7 +11,7 @@ label EP1_jail_day2:
     $ policeCellBedlabel = "jail_day2_Bed"
     $ policeCellCagelabel = "jail_day2_Cage"
     call EP1_refresh_scene_fade()
-    stop music fadeout 1.0
+    music stop
     call textonblack(t_("ДЕНЬ 2"))
     img black_screen
     with Dissolve(1)

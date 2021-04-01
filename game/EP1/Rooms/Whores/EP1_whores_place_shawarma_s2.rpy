@@ -1,4 +1,4 @@
-
+default EP1_whores_place_shawarma_s2_crossroad_blocked = False
 label EP1_whores_place_shawarma_s2:
     $ print "enter_whores_place_shawarma_s2"
     $ miniMapData = []
@@ -27,7 +27,8 @@ label EP1_whores_place_shawarma_s2:
 
     $ EP1_add_object_to_scene("Teleport_Clothing_Shop", {"type":3, "text" : t_("К МАГАЗИНУ ОДЕЖДЫ"), "larrow" : "arrow_down_2", "base":"Street_whores_place_shawarma_Teleport_Clothing_Shop", "click" : "EP1_whores_place_shawarma_teleport2", "xpos" : 304, "ypos" : 856, "zorder":15})
     $ EP1_add_object_to_scene("Teleport_Street_Hostel", {"type":3, "text" : t_("ПОДВОРОТНЯ"), "larrow" : "arrow_left_2", "base":"Street_whores_place_shawarma_Teleport_Street_Hostel", "click" : "EP1_whores_place_shawarma_teleport2", "xpos" : 182, "ypos" : 376, "zorder":15})
-    $ EP1_add_object_to_scene("Teleport_Whores_Place", {"type":3, "text" : t_("К ПЕРЕКРЕСТКУ"), "rarrow" : "arrow_right_2", "base":"Street_whores_place_shawarma_Teleport_Whores_Place", "click" : "EP1_whores_place_shawarma_teleport2", "xpos" : 1375, "ypos" : 1022, "zorder":15})
+    if EP1_whores_place_shawarma_s2_crossroad_blocked == False:
+        $ EP1_add_object_to_scene("Teleport_Whores_Place", {"type":3, "text" : t_("К ПЕРЕКРЕСТКУ"), "rarrow" : "arrow_right_2", "base":"Street_whores_place_shawarma_Teleport_Whores_Place", "click" : "EP1_whores_place_shawarma_teleport2", "xpos" : 1375, "ypos" : 1022, "zorder":15})
 
     if whoresMonicaDisturb == True:
         $ EP1_autorun_to_object("whores_place_s2", "afterjail_whores_disturb_dialogue1")
@@ -104,6 +105,6 @@ label EP1_whores_place_shawarma_environment2(obj_name, obj_data):
                 "Нет, не у этого животного точно!"
             else:
                 "Нет, не у этого человека точно!"
-            stop music fadeout 1.0
+            music stop
             call EP1_refresh_scene_fade()
         return

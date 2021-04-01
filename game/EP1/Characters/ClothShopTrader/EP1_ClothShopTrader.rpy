@@ -1,7 +1,7 @@
 label EP1_clothShopTraderScene1:
     scene black_screen
     with Dissolve(1)
-    stop music fadeout 1.0
+    music stop
     call textonblack(t_("ТЕМ ВРЕМЕНЕМ..."))
     scene black_screen
     with Dissolve(1)
