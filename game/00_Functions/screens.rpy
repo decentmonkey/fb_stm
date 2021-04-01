@@ -2112,19 +2112,49 @@ screen main_menu():
             xysize (get_resolution_x(gui.resolution.main_menu.lang.width), get_resolution_y(gui.resolution.main_menu.lang.height))
             anchor (0,0)
             background Frame("gui/frame_lang.png", left=0, top=0, right=5, bottom=0)
+#            vbox:
+#                pos (0,0)
+#                anchor (0,0)
+#                style_prefix "navigation"
+#                label t_("Language"):
+#                    text_size gui.resolution.main_menu.font_size1
+#                textbutton "English" action Language("english"):
+#                    text_size gui.resolution.main_menu.font_size2
+#                textbutton "German" action Language("german"):
+#                    text_size gui.resolution.main_menu.font_size2
+#                textbutton "French" action Language("french"):
+#                    text_size gui.resolution.main_menu.font_size2
+#                textbutton "Russian" action Language(None):
+#                    text_size gui.resolution.main_menu.font_size2
             vbox:
                 pos (0,0)
                 anchor (0,0)
+                first_spacing get_resolution_x(10)
                 style_prefix "navigation"
                 label t_("Language"):
                     text_size gui.resolution.main_menu.font_size1
                 textbutton "English" action Language("english"):
                     text_size gui.resolution.main_menu.font_size2
-                textbutton "German" action Language("german"):
-                    text_size gui.resolution.main_menu.font_size2
                 textbutton "French" action Language("french"):
                     text_size gui.resolution.main_menu.font_size2
+                textbutton "German" action Language("german"):
+                    text_size gui.resolution.main_menu.font_size2
                 textbutton "Russian" action Language(None):
+                    text_size gui.resolution.main_menu.font_size2
+            vbox:
+                pos (get_resolution_x(150),0)
+                anchor (0,0)
+                first_spacing get_resolution_x(10)
+                style_prefix "navigation"
+                label t_(" "):
+                    text_size gui.resolution.main_menu.font_size1
+                textbutton "Spanish (EP1)" action Language("spanish"):
+                    text_size gui.resolution.main_menu.font_size2
+                textbutton "Italian (EP1)" action Language("italian"):
+                    text_size gui.resolution.main_menu.font_size2
+                textbutton "Turkish (EP1)" action Language("turkish"):
+                    text_size gui.resolution.main_menu.font_size2
+                textbutton "Chinese (EP1)" action Language("chinese"):
                     text_size gui.resolution.main_menu.font_size2
 
         if language_credits.has_key(str(_preferences.language)):
@@ -2567,9 +2597,17 @@ screen preferences():
                     style_prefix "pref"
 
                     label t_("Language")
+#                    textbutton "English" action Language("english")
+#                    textbutton "German" action Language("german")
+#                    textbutton "French" action Language("french")
+#                    textbutton "Russian" action Language(None)
                     textbutton "English" action Language("english")
-                    textbutton "German" action Language("german")
                     textbutton "French" action Language("french")
+                    textbutton "German" action Language("german")
+                    textbutton "Italian (EP1)" action Language("italian")
+                    textbutton "Spanish (EP1)" action Language("spanish")
+                    textbutton "Turkish (EP1)" action Language("turkish")
+                    textbutton "Chinese (EP1)" action Language("chinese")
                     textbutton "Russian" action Language(None)
 
                 vbox:

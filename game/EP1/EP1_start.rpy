@@ -65,7 +65,7 @@ label EP1_start:
 
     $ after_load_ready_to_render = True
     $ scene_transition = "Fade_long"
-    $ autorun_to_object("intro_scene", "intro_scene_start")
+    $ EP1_autorun_to_object("intro_scene", "intro_scene_start")
     jump show_scene
 
 label EP1_start_new_game:

@@ -46,6 +46,7 @@ default EP1 = False
 default EP1_skipintro = False
 
 label start:
+    imgfl scene_Map_Evening
     menu:
         "Episode 1":
             jump EP1_start
@@ -54,6 +55,8 @@ label start:
     #new game
 
 label startfromep1:
+    if _preferences.language == "spanish" or _preferences.language == "chinese" or _preferences.language == "turkish":
+        $ _preferences.language = "english"
     $ EP1 = False
     $ translation_load_EP2()
     $ bardieCensored = True
