@@ -2097,6 +2097,8 @@ define offsets_table = {
     "fitness_locker_2_betty":(268,559,836,1919),
     "fitness_locker_2_rebecca":(278,936,836,1919),
     "fitness_locker_2_stephanie":(193,713,836,1919),
+    "fitness_locker_2_ep1_rebecca":(209,264,814,420),
+    "fitness_locker_2_ep1_stephanie":(219,468,730,641),
     "fitness_street_betty":(562,1186,891,1306),
     "fitness_street_betty2":(564,1146,894,1300),
     "fitness_street_betty_monica":(564,1294,1079,1808),

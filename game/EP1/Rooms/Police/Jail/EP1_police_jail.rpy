@@ -11,25 +11,25 @@ label EP1_police_jail_scene:
 
     if jailScenePlace == 0:
         $ scene_image = policeCellStageName1
-        $ EP1_add_object_to_scene("Monica", {"type":2, "base": policeCellMonica1, "click" : policeCellMonicaLabel, "actions" : "l", "zorder" : 10})
+        $ EP1_add_object_to_scene("Monica", {"type":2, "base": policeCellMonica1, "click" : policeCellMonicalabel, "actions" : "l", "zorder" : 10})
         if policeJailObjectsBed1Enabled == True:
-            $ EP1_add_object_to_scene("Bed1", {"type":2, "base":"Police_Cell_1_Bed", "click" : policeCellBedLabel, "actions" : "lh", "zorder" : 1})
+            $ EP1_add_object_to_scene("Bed1", {"type":2, "base":"Police_Cell_1_Bed", "click" : policeCellBedlabel, "actions" : "lh", "zorder" : 1})
         if policeJailObjectsEnabled == True:
-            $ EP1_add_object_to_scene("Bed2", {"type":2, "base":"Police_Cell_1_Bed2", "click" : policeCellBed2Label, "actions" : "l", "zorder" : 1})
-            $ EP1_add_object_to_scene("Lamp", {"type":2, "base":"Police_Cell_1_Lamp", "click" : policeCellLampLabel, "actions" : "lh", "zorder" : 1})
-            $ EP1_add_object_to_scene("Sortir", {"type":2, "base":"Police_Cell_1_Sortir", "click" : policeCellSortirLabel, "actions" : "lh", "zorder" : 1})
+            $ EP1_add_object_to_scene("Bed2", {"type":2, "base":"Police_Cell_1_Bed2", "click" : policeCellBed2label, "actions" : "l", "zorder" : 1})
+            $ EP1_add_object_to_scene("Lamp", {"type":2, "base":"Police_Cell_1_Lamp", "click" : policeCellLamplabel, "actions" : "lh", "zorder" : 1})
+            $ EP1_add_object_to_scene("Sortir", {"type":2, "base":"Police_Cell_1_Sortir", "click" : policeCellSortirlabel, "actions" : "lh", "zorder" : 1})
             $ EP1_add_object_to_scene("Teleport_Cage", {"type":3, "text" : t_("РЕШЕТКА"), "rarrow" : "arrow_right_2", "base":"empty", "click" : "EP1_police_jail_scene_teleport", "xpos" : 1680, "ypos" : 233, "zorder":5})
         if policeJailObjectsTeleportForced == True:
             $ EP1_add_object_to_scene("Teleport_Cage", {"type":3, "text" : t_("РЕШЕТКА"), "rarrow" : "arrow_right_2", "base":"empty", "click" : "EP1_police_jail_scene_teleport", "xpos" : 1680, "ypos" : 233, "zorder":5})
 
     if jailScenePlace == 1:
         $ scene_image = policeCellStageName2
-        $ EP1_add_object_to_scene("Monica", {"type":2, "base": policeCellMonica2, "click" : policeCellMonicaLabel, "actions" : "l", "zorder" : 10})
+        $ EP1_add_object_to_scene("Monica", {"type":2, "base": policeCellMonica2, "click" : policeCellMonicalabel, "actions" : "l", "zorder" : 10})
         if policeJailObjectsBed1Enabled == True:
-            $ EP1_add_object_to_scene("Bed1", {"type":2, "base":"Police_Cell_2_Bed", "click" : policeCellBedLabel, "actions" : "lh", "zorder" : 1})
+            $ EP1_add_object_to_scene("Bed1", {"type":2, "base":"Police_Cell_2_Bed", "click" : policeCellBedlabel, "actions" : "lh", "zorder" : 1})
         if policeJailObjectsEnabled == True:
-            $ EP1_add_object_to_scene("Bed2", {"type":2, "base":"Police_Cell_2_Bed2", "click" : policeCellBed2Label, "actions" : "l", "zorder" : 1})
-            $ EP1_add_object_to_scene("Cage", {"type":2, "base":"Police_Cell_2_Cage", "click" : policeCellCageLabel, "actions" : "lw", "zorder" : 1})
+            $ EP1_add_object_to_scene("Bed2", {"type":2, "base":"Police_Cell_2_Bed2", "click" : policeCellBed2label, "actions" : "l", "zorder" : 1})
+            $ EP1_add_object_to_scene("Cage", {"type":2, "base":"Police_Cell_2_Cage", "click" : policeCellCagelabel, "actions" : "lw", "zorder" : 1})
             $ EP1_add_object_to_scene("Teleport_Bed", {"type":3, "text" : t_("КАМЕРА"), "larrow" : "arrow_left_2", "base":"empty", "click" : "EP1_police_jail_scene_teleport", "xpos" : 190, "ypos" : 326, "zorder":5})
         if policeJailObjectsTeleportForced == True:
             $ EP1_add_object_to_scene("Teleport_Bed", {"type":3, "text" : t_("КАМЕРА"), "larrow" : "arrow_left_2", "base":"empty", "click" : "EP1_police_jail_scene_teleport", "xpos" : 190, "ypos" : 326, "zorder":5})

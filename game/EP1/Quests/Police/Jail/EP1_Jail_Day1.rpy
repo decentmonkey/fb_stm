@@ -9,7 +9,7 @@ default monicaKnowOverseerName = False
 
 default policeCellMonica1 = "Police_Cell_1_Day_1_1"
 default policeCellMonica2 = "Police_Cell_2_Day_1_1"
-default policeCellMonicalabel= "jail_day1_Monica"
+default policeCellMonicalabel = "jail_day1_Monica"
 default policeCellBedlabel = "jail_day1_Bed"
 default policeCellBed2label = "jail_day1_Bed2"
 default policeCellLamplabel = "jail_day1_Lamp"

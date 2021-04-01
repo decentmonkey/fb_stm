@@ -51,6 +51,7 @@ label start:
         "Episode 2":
             pass
     #new game
+    $ EP1 = False
     $ bardieCensored = True
     $ after_load_ready_to_render = True
     $ refresh_list_files_forced()

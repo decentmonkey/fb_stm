@@ -173,6 +173,7 @@ label EP1_jail_day12_Cage_Interact:
     $ policeJailObjectsBed1Enabled = False
     $ policeJailObjectsTeleportForced = True
     $ jailDaySceneStage = 1
+    call EP1_change_scene("EP1_police_jail_scene")
     call EP1_refresh_scene_fade()
 
     return

@@ -12,8 +12,8 @@ label EP1_fitness_locker_2:
         else:
             $ scene_image = "scene_fitness_locker_2_Stephanie_Rebecca_Monica2_" + cloth
             $ EP1_add_object_to_scene("Monica", {"type":2, "base":"Fitness_Locker_2_Stephanie_Rebecca_Monica2_" + cloth, "click" : "EP1_fitness_locker_2_environment", "actions" : "l", "zorder" : 12})
-        $ EP1_add_object_to_scene("Stephanie", {"type":2, "base":"fitness_locker_2_Stephanie", "click" : "EP1_fitness_locker_2_environment", "actions" : "lt", "zorder" : 12})
-        $ EP1_add_object_to_scene("Rebecca", {"type":2, "base":"fitness_locker_2_Rebecca", "click" : "EP1_fitness_locker_2_environment", "actions" : "lt", "zorder" : 12})
+        $ EP1_add_object_to_scene("Stephanie", {"type":2, "base":"fitness_locker_2_EP1_Stephanie", "click" : "EP1_fitness_locker_2_environment", "actions" : "lt", "zorder" : 12})
+        $ EP1_add_object_to_scene("Rebecca", {"type":2, "base":"fitness_locker_2_EP1_Rebecca", "click" : "EP1_fitness_locker_2_environment", "actions" : "lt", "zorder" : 12})
 
     else:
         if cloth_type == "BusinessCloth":

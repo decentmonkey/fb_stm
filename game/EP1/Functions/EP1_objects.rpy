@@ -144,6 +144,8 @@ label EP1_process_object_click(func_name, obj_name, obj_data):
     $ interface_blocked_flag = True
     $ screenActionHappened = False
     $ act = obj_data["action"]
+    if renpy.has_label("EP1_" + func_name):
+        $ func_name = "EP1_" + func_name
     call expression func_name pass (obj_name, obj_data) from _ep1_call_expression
     if screenActionHappened == True:
         $ clickHoldFlag = True
@@ -172,7 +174,10 @@ label EP1_process_object_click_alternate_action(idx, actions_list, click_label, 
         $ func_name = click_label
     else:
         if renpy.has_label(name + actions_list[idx]["label_suffix"]) == False:
-            $ func_name = click_label
+            if renpy.has_label("EP1_" + name + actions_list[idx]["label_suffix"]) == False:
+                $ func_name = click_label
+            else:
+                $ func_name = "EP1_" + name + actions_list[idx]["label_suffix"]
         else:
             $ func_name = name + actions_list[idx]["label_suffix"]
 
@@ -190,6 +195,8 @@ label EP1_process_object_click_alternate_action(idx, actions_list, click_label, 
     show screen sprites_hover_dummy_screen()
     $ interface_blocked_flag = True
     $ act = data["action"]
+    if renpy.has_label("EP1_" + func_name):
+        $ func_name = "EP1_" + func_name
     call expression func_name pass (name, data) from _ep1_call_expression_1
     $ interface_blocked_flag = False
     if _return != False:

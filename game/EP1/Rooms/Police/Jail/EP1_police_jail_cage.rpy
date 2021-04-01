@@ -17,6 +17,7 @@ label EP1_police_jail_cage_scene:
         $ EP1_add_object_to_scene("Monica", {"type":2, "base": "Police_Cell_3_Nude", "click" : "EP1_police_jail_cage_scene_environment", "actions" : "l", "zorder" : 10})
     else:
         $ EP1_add_object_to_scene("Monica", {"type":2, "base": "Police_Cell_3", "click" : "EP1_police_jail_cage_scene_environment", "actions" : "l", "zorder" : 10})
+    $ EP1_add_object_to_scene("Police_Jail_Cage_Teleport_Cell", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "EP1_police_jail_cage_scene_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     $ cageInteractCnt = cageInteractAmount
     return
@@ -25,6 +26,8 @@ label EP1_police_jail_cage_scene:
 #                            $ contrast_adjustment = 1.3
 
 label EP1_police_jail_cage_scene_teleport(obj_name, obj_data):
+    if obj_name == "Police_Jail_Cage_Teleport_Cell":
+        call EP1_change_scene("EP1_police_jail_scene")
     return
 label EP1_police_jail_cage_scene_environment(obj_name, obj_data):
     if obj_name == "Cage":
@@ -33,7 +36,10 @@ label EP1_police_jail_cage_scene_environment(obj_name, obj_data):
             sound snd_jail_door_locked
             return
         call EP1_change_scene(jailCageLastScene, "Fade", False)
-        call expression cageInteractlabel
+        $ cageInteractlabelExec = cageInteractlabel
+        if renpy.has_label("EP1_" + cageInteractlabelExec):
+            $ cageInteractlabelExec = "EP1_" + cageInteractlabelExec
+        call expression cageInteractlabelExec
         return
     if obj_name == "Monica":
         mt "Надо дергать эту проклятую решетку!"

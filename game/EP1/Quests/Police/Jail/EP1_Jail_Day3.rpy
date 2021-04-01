@@ -84,7 +84,7 @@ label EP1_jail_day3_Cage(obj_name, obj_data):
         return
     if act == "w":
         $ cageInteractlabel = "jail_day3_Cage_Interact"
-        call EP1_change_scene("EP_police_jail_cage_scene")
+        call EP1_change_scene("EP1_police_jail_cage_scene")
         return
 
     return
@@ -454,6 +454,6 @@ label EP1_jail_day3_3:
     "И только попробуй сказать что это невкусная баланда!"
 
     $ jailFoodInteractlabel= "jail_day3_2a"
-    call EP1_change_scene("EP_police_jail_food_scene", "Fade", False)
+    call EP1_change_scene("EP1_police_jail_food_scene", "Fade", False)
 
     return

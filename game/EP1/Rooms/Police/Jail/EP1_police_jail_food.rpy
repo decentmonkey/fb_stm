@@ -34,7 +34,13 @@ label EP1_police_jail_food_scene_environment(obj_name, obj_data):
             img black_screen
             with Dissolve(1)
             call EP1_change_scene(jailFoodLastScene, "Fade", False)
-            call expression jailFoodInteractlabel
+
+            $ jailFoodInteractlabelExec = jailFoodInteractlabel
+            if renpy.has_label("EP1_" + jailFoodInteractlabelExec):
+                $ jailFoodInteractlabelExec = "EP1_" + jailFoodInteractlabelExec
+            call expression jailFoodInteractlabelExec
+            call EP1_change_scene("EP1_police_jail_scene")
+            
             return
 
     return
