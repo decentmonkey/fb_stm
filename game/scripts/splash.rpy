@@ -4,17 +4,25 @@ label splashscreen:
         return
 
     scene black
+    image videoIntro_Video = Movie(play="video/Intro_Video.webm", fps=30)
+#    image videoIntro_Video = Movie(play="video/Trailer2_b.mp4", fps=30)
+    show videoIntro_Video
+    $ renpy.pause(2.0, hard=True)
+    $ renpy.pause(68.0)
+
+    scene black
 #    image videoIntro_Video = Movie(play="video/Intro_Video.webm", fps=30)
-#    show videoIntro_Video
-#    $ renpy.pause(2.0, hard=True)
-#    $ renpy.pause(68.0)
-#    stop music fadeout 0.5
-    img black_screen
-    with Dissolve(0.5)
-    img decentmonkey_logo
-    with Dissolve(0.7)
-    $ renpy.pause(1.0)
-    pause 4.0
+    image videoIntro_Video2 = Movie(play="video/Intro_Video2.webm", fps=30)
+    show videoIntro_Video2
+    $ renpy.pause(2.0, hard=True)
+    $ renpy.pause(55.0)
+    stop music fadeout 0.5
+#    img black_screen
+#    with Dissolve(0.5)
+#    img decentmonkey_logo
+#    with Dissolve(0.7)
+#    $ renpy.pause(1.0)
+#    pause 4.0
     img black_screen
     with Dissolve(0.7)
     img black_screen

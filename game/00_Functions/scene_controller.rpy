@@ -292,7 +292,10 @@ label after_load():
 ##        help "Пожалуйста, используйте для загрузки более новую версию игры!"
 #        $ MainMenu(confirm=False)()
 #        return
-
+    if SteamVersion1 == False:
+        help "This save file is incompatible with the current game version. Please, start new game! Sorry!"
+        $ MainMenu(confirm=False)()
+        return
     $ list_files_active = True
     $ refresh_list_files ()
     if renpy.get_screen("show_image_screen") or renpy.get_screen("screen_sprites"):

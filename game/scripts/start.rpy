@@ -1,4 +1,4 @@
-define debugMode = True
+define debugMode = False
 
 default gameStage = 0
 default gameSubStage = 0
@@ -44,8 +44,10 @@ default bardieCensored = False
 
 default EP1 = False
 default EP1_skipintro = False
+default SteamVersion1 = False
 
 label start:
+    $ SteamVersion1 = True
     imgfl scene_Map_Evening
     menu:
         "Episode 1":
