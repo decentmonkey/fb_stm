@@ -292,7 +292,7 @@ label after_load():
 ##        help "Пожалуйста, используйте для загрузки более новую версию игры!"
 #        $ MainMenu(confirm=False)()
 #        return
-    if SteamVersion1 == False:
+    if SteamVersion1 == False and 1==2:
         help "This save file is incompatible with the current game version. Please, start new game! Sorry!"
         $ MainMenu(confirm=False)()
         return

@@ -112,6 +112,18 @@ python early:
     def imgl_exec(s_in):
         s, transition = s_in
         global dialogue_active_flag, screenActionHappened
+
+        try:
+            imagePathExt = img_find_path_ext(renpy.eval(s))
+        except:
+            imagePathExt = img_find_path_ext(s)
+        if imagePathExt[0] == False:
+            imagePath = "images/Slides/img_" + imagePathExt[1] + ".jpg"
+        else:
+            imagePath = imagePathExt[0]
+
+        check_achievement(imagePathExt[1])
+
         renpy.show_screen("dialogue_image_black_overlay")
         renpy.show_screen("dialogue_image_left", img_find_path(s), config.screen_width / 2, config.screen_height)
         screenActionHappened = True
@@ -121,6 +133,18 @@ python early:
     def imgr_exec(s_in):
         s, transition = s_in
         global dialogue_active_flag, screenActionHappened
+
+        try:
+            imagePathExt = img_find_path_ext(renpy.eval(s))
+        except:
+            imagePathExt = img_find_path_ext(s)
+        if imagePathExt[0] == False:
+            imagePath = "images/Slides/img_" + imagePathExt[1] + ".jpg"
+        else:
+            imagePath = imagePathExt[0]
+
+        check_achievement(imagePathExt[1])
+
         renpy.show_screen("dialogue_image_black_overlay")
         renpy.show_screen("dialogue_image_right", img_find_path(s), config.screen_width / 2, config.screen_height)
         screenActionHappened = True
@@ -130,6 +154,18 @@ python early:
     def imgcenter_exec(s_in):
         s, transition = s_in
         global dialogue_active_flag, screenActionHappened
+
+        try:
+            imagePathExt = img_find_path_ext(renpy.eval(s))
+        except:
+            imagePathExt = img_find_path_ext(s)
+        if imagePathExt[0] == False:
+            imagePath = "images/Slides/img_" + imagePathExt[1] + ".jpg"
+        else:
+            imagePath = imagePathExt[0]
+
+        check_achievement(imagePathExt[1])
+
         renpy.show_screen("dialogue_image_black_overlay")
         renpy.show_screen("dialogue_image_center", img_find_path(s), config.screen_width / 2, config.screen_height)
         screenActionHappened = True

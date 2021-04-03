@@ -3,7 +3,8 @@ label afterJailHouse_dialogue1a(o,d): #
     return
 label afterJailHouse_dialogue1b: #
 #    help "В доме стали доступны новые локации! Гостиная, спальня для гостей и комната Барди."
-    help "В доме стали доступны новые локации! Гостиная и спальня для гостей."
+#    help "В доме стали доступны новые локации! Гостиная и спальня для гостей."
+    help "New house locations opened!"
     return
 
 

@@ -21,6 +21,11 @@ define offsets_table = {
     "office_dick_hall1_monica_afterjail":(227,743,1033,925),
     "office_dick_hall1_monica_whore":(224,681,1024,971),
     "office_dick_hall1_monica_whore_2":(250,696,1043,951),
+    "bedroom1_betty_evening_overlay":(514,207,778,809),
+    "bedroom1_betty_overlay":(361,572,606,715),
+    "bedroom1_betty_evening":(456,234,689,659),
+    "bedroom1_betty_":(240,715,640,898),
+    "bedroom1_betty":(240,715,640,898),
 
     "bank_office_chair1_mask":(680,409,1079,903),
     "bank_office_chair2_mask":(318,1688,769,1919),
