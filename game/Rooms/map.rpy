@@ -83,6 +83,8 @@ label map:
 
 
 label map_environment:
+    if EP1 == True:
+        jump EP1_map_environment
     if obj_name == "Close":
         call map_close() from _call_map_close
         return
@@ -104,7 +106,7 @@ label map_environment:
 
     if obj_name == "Teleport_House":
         if teleportHomeFredBlowjobFlag == True:
-            call afterJailFredDialogue3() from _call_afterJailFredDialogue3
+            call EP1_afterJailFredDialogue3() from _call_ep1_afterJailFredDialogue3
             call process_drive_teleport("House", "street_house_main_yard") from _call_process_drive_teleport
             return
         $ street_house_outside_monica_suffix = 2

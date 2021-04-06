@@ -5,6 +5,7 @@
 ## may want to uncomment them when appropriate.
 
 define build.include_update = True
+#define build.include_i686 = False # include 32bit
 ## Basics ######################################################################
 
 ## A human-readable name of the game. This is used to set the default window

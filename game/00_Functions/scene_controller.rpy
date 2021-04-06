@@ -151,6 +151,8 @@ label show_scene_loop:
     $ engine2_inited_flag = True
     $ interact_data = None
     $ interact_data = ui.interact()
+    if interact_data is None:
+        $ interact_data = False
     if interact_data != None and interact_data != False:
         if interact_data[0] == "process_object_click":
             if EP1 == False:
@@ -163,10 +165,11 @@ label show_scene_loop:
             else:
                 call EP1_process_object_click_alternate_action(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _ep1_rcall_sprites_action2
         if interact_data[0] == "process_object_click_alternate_inventory":
-            if EP1 == False:
-                call process_object_click_alternate_inventory(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _rcall_sprites_action3
-            else:
-                call EP1_process_object_click_alternate_inventory(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _ep1_rcall_sprites_action3
+            if interact_data is not None:
+                if EP1 == False:
+                    call process_object_click_alternate_inventory(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _rcall_sprites_action3
+                else:
+                    call EP1_process_object_click_alternate_inventory(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _ep1_rcall_sprites_action3
         if interact_data[0] == "time_management_street_wait_until_evening":
             call time_management_street_wait_until_evening() from _rcall_sprites_action4
         if interact_data[0] == "show_questlog":
@@ -292,7 +295,7 @@ label after_load():
 ##        help "Пожалуйста, используйте для загрузки более новую версию игры!"
 #        $ MainMenu(confirm=False)()
 #        return
-    if SteamVersion1 == False and 1==2:
+    if SteamVersion1 == False:
         help "This save file is incompatible with the current game version. Please, start new game! Sorry!"
         $ MainMenu(confirm=False)()
         return
