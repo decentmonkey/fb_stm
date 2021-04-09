@@ -132,13 +132,13 @@ label show_scene_now:
             jump show_scene
 
     if EP1 == False:
-        if scenes_data["autorun"].has_key(scene_name) and scenes_data["autorun"][scene_name].has_key("scene"):
+        if scenes_data["autorun"].has_key(scene_name) and hasattr(scenes_data["autorun"][scene_name], 'has_key') and scenes_data["autorun"][scene_name].has_key("scene"):
             $ autorunFunc = scenes_data["autorun"][scene_name]["scene"]
             $ del scenes_data["autorun"][scene_name]["scene"]
             show screen sprites_hover_dummy_screen()
-            if EP1==True:
-                if renpy.has_label("EP1_" + autorunFunc):
-                    $ autorunFunc = "EP1_" + autorunFunc
+#            if EP1==True:
+#                if renpy.has_label("EP1_" + autorunFunc):
+#                    $ autorunFunc = "EP1_" + autorunFunc
             call expression autorunFunc from _call_expression_6
     #        hide screen sprites_hover_dummy_screen
             $ scene_refresh_flag = True

@@ -105,10 +105,10 @@ label map_environment:
         return
 
     if obj_name == "Teleport_House":
-        if teleportHomeFredBlowjobFlag == True:
-            call EP1_afterJailFredDialogue3() from _call_ep1_afterJailFredDialogue3
-            call process_drive_teleport("House", "street_house_main_yard") from _call_process_drive_teleport
-            return
+#        if teleportHomeFredBlowjobFlag == True:
+#            call EP1_afterJailFredDialogue3() from _call_ep1_afterJailFredDialogue3
+#            call process_drive_teleport("House", "street_house_main_yard") from _call_process_drive_teleport
+#            return
         $ street_house_outside_monica_suffix = 2
         if gameStage == 2 or gameStage == 3:
             call process_drive_teleport("House", "street_house_outside") from _call_process_drive_teleport_4

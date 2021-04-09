@@ -60,6 +60,13 @@ label startfromep1:
     if _preferences.language == "spanish" or _preferences.language == "chinese" or _preferences.language == "turkish":
         $ _preferences.language = "english"
     $ EP1 = False
+    python:
+        teleportHomeFredBlowjobFlag = False
+        mapSubstMonicaOfficeToPolice = False
+        mapSubstMonicaOfficeToSteve = False
+        teleportDickOfficeHeavyRainFlag = False
+        teleportDickOfficeEveningFlag = False
+        mapSubstClothingShopToStreetCorner = False
     $ translation_load_EP2()
     $ bardieCensored = True
     $ after_load_ready_to_render = True
