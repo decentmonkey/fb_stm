@@ -1,5 +1,4 @@
-init:
-
+define config.steam_appid = 1364140
 #    $ achievement.register("")
 #    $ achievement.sync()
 init python:
