@@ -401,6 +401,7 @@ label EP1_floor2_julia_monica_revenge_go_to_floor2:
                 m "ПОСМОТРИ ЧТО ТЫ НАДЕЛАЛА!!!"
                 call EP1_bitch(5, "monica_julia_revenge_lie")
                 $ juliaMonicaLied = True
+                $ steam_achievement("ach1")
                 img 1092
                 julia "Аххххх!!!"
 
@@ -597,6 +598,7 @@ label EP1_floor2_julia_monica_revenge_go_to_floor2:
                 $ juliaPunishedLow = False
                 $ juliaPunishedVoluntarily = False
                 $ juliaPunishedNone = True
+                $ steam_achievement("ach2")
                 $ juliaLocation = "floor1"
                 img 1089
                 m "Нет, Юлия. Не стоит пытаться сделать невозможную работу."

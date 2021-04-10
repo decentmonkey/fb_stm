@@ -12,6 +12,12 @@ label EP1_bitch(amount, place=False):
         $ amount *= 3
 
     $ bitchmeterValue += amount
+
+    if bitchmeterValue >= maxBitchness:
+        $ steam_achievement("ach14")
+    if bitchmeterValue <= 153
+        $ steam_achievement("ach15")
+
     if amount > 0:
         show screen notify ("Bitchness increased!")
     else:

@@ -1048,6 +1048,7 @@ label EP1_monkeys_monica_photostudio1_2:
         "Я СКАЗАЛА БЫСТРО ВОН ОТСЮДА! МАЛЯВКИ!!!":
             $ monkeysOffended4 = True
             call EP1_bitch(2, "monkeys_offend4")
+            $ steam_achievement("ach3")
 
             img 1317
             m "ТАК."
@@ -1062,6 +1063,7 @@ label EP1_monkeys_monica_photostudio1_2:
         "Мое решение окончательно. Мне очень жаль что так вышло.":
             $ monkeysOffended4 = True
             call EP1_bitch(-2, "monkeys_offend4")
+            $ steam_achievement("ach3")
             img 1315
             "Мое решение окончательно.
             Мне очень жаль что так вышло."

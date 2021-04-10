@@ -70,6 +70,7 @@ label EP1_quest_house_monica_day3_day_init:
                         $ add_objective("fire_julia", t_("Уволить Юлию"), c_white, 21)
                         $ juliaFirePlanned = True
                         $ fireAmount = fireAmount + 1
+                        $ steam_achievement("ach5")
                         img 1967
                         mt "Бедняжка."
 
@@ -162,6 +163,7 @@ label EP1_quest_house_monica_day3_day_init:
                     $ add_objective("fire_fred", t_("Уволить Фреда"), c_white, 24)
                     $ fredFirePlanned = True
                     $ fireAmount = fireAmount + 1
+                    $ steam_achievement("ach6")
                     img 1980
                     "Он слишком много со мной спорит."
 

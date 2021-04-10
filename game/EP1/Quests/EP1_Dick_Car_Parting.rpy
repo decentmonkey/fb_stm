@@ -83,6 +83,7 @@ label EP1_dick_meeting1_car_parting2:
             "Мистеру Дику надо срочно выйти!"
             imgr 1442
             fred "Конечно, Мэм!"
+            $ steam_achievement("ach4")
             call EP1_process_change_map_location("Cloth_Shop")
             $ EP1_autorun_to_object("street_cloth_shop", "dick_meeting1_car_parting3")
             call EP1_change_scene("street_cloth_shop", "Fade_long", "snd_car_engine")

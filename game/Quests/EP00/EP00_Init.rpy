@@ -52,6 +52,12 @@ label ep00_check_game_end:
         with Dissolve(1)
         call textonblack_long("FASHION BUSINESS")
         scene black_screen
+        $ steam_achievement("ach67")
+        if monica_cheats_iteration_count == 0:
+            $ steam_achievement("ach64")
+        else:
+            $ steam_achievement("ach65")
+
         help "Вы прошли все существующие квесты в данной версии игры."
         help "Вы можете жить дальше в этом мире, либо продолжить в следующей версии игры!"
         scene black_screen

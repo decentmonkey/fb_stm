@@ -1,5 +1,6 @@
 label EP1_episode1End:
 #    $ _dismiss_pause = False
+    $ steam_achievement("ach17")
     img black_screen
     with Dissolve(2.0)
     img 3371
@@ -35,6 +36,7 @@ label EP1_episode1End:
 label EP1_episode1End_Dick:
 #    music beautiful_messenger_piano
 #    $ _dismiss_pause = False
+    $ steam_achievement("ach11")
     img 5765
     with Dissolve(5.0)
 #    $ renpy.pause(3.0)

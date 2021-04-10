@@ -81,6 +81,7 @@ label ep27_quests_julia2: # Проверка на первый приход Фр
         $ questsFailByCategory(t_("ЮЛИЯ"))
         $ juliaQuestRefused = True
         $ remove_hook(label="ep29_quests_julia3_workers")
+        $ steam_achievement("ach34")
 
     return False
 

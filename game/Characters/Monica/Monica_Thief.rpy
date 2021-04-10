@@ -67,6 +67,8 @@ label monica_gas_station_thief_dialogue2:
 
     $ monicaStoleFoodGasStationAmount +=1
     $ monicaStoleFoodTotal +=1
+    if monicaStoleFoodGasStationAmount == 1:
+        $ steam_achievement("ach45")
     call monicaEat() from _call_monicaEat_2
     $ restore_music()
     call change_scene("street_gas_station", "Fade_long", "snd_gulp") from _call_change_scene_60

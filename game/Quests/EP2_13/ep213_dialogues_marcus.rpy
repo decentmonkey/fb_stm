@@ -1770,6 +1770,7 @@ label ep213_dialogues_marcus4_loop10:
     return
 
 label ep213_dialogues_marcus5:  # bad end (ферма)
+    $ steam_achievement("ach43")
     fadeblack 3.0
     call textonblack(t_("Спустя некоторое время...")) from _rcall_textonblack_45
     img black_screen

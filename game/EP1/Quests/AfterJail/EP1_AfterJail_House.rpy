@@ -83,6 +83,7 @@ label EP1_afterJailHouse_dialogue5: #bedroom_betty
 label EP1_afterJailHouse_dialogue6: #kitchen
     return
 label EP1_afterJailHouse_dialogue7: #bathroom
+    $ steam_achievement("ach13")
     music Groove2_85
     img 3341
     with fadelong

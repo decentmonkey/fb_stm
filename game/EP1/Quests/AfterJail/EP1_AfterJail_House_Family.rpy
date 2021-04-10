@@ -241,6 +241,7 @@ label EP1_afterJailHouseFamily_dialogue3:
     "Я буду присматривать за тобой!"
 
     $ streetHouseMainYardStage = 2
+    $ steam_achievement("ach12")
 
     $ miniMapEnabledOnly = ["Floor1", "Street_Yard"]
     $ casualMusic = "Groove2_85"

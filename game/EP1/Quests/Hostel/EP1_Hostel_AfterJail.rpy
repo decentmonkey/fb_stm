@@ -743,6 +743,7 @@ label EP1_hostelAfterJail_street_dialogue2(o, d):
             return
 
 #    /Все, я на месте. Мне надо переодеться
+    $ steam_achievement("ach10")
     img 3023
     with fadelong
     mt "Надо как-то надеть эти тряпки!"
@@ -845,7 +846,7 @@ label EP1_hostelAfterJail_street_dialogue4:
             pass
         "Уйти.":
             return
-
+    $ steam_achievement("ach10")
 #    /Все, я на месте. Мне надо переодеться
 
     #render+

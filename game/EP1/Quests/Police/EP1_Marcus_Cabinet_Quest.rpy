@@ -136,6 +136,7 @@ label EP1_marcus_cabinet_dialogue3:
     marcus "Все свободны."
     img 2126
     "Кроме Миссис Бакфетт."
+    $ steam_achievement("ach8")
 
     $ marcusCabinetState = 2
     call EP1_change_scene("EP1_police_marcuscabinet", "Fade", False)
@@ -678,6 +679,7 @@ label EP1_marcus_cabinet_dialogue13:
     sound snd_phone1
     $ renpy.pause(2.0)
     marcus "Вывести заключенную."
+    $ steam_achievement("ach9")
     music Power_Bots_Loop
     $ policeEntranceState = 4
     $ EP1_autorun_to_object("EP1_police_entrance_s2", "EP1_entrance_dialogue7")

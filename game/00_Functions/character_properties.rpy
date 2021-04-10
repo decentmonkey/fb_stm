@@ -149,6 +149,12 @@ label bitch(amount, place=False):
         $ bitchmeterValue = 0
     if bitchmeterValue > maxBitchness:
         $ bitchmeterValue = maxBitchness
+
+    if bitchmeterValue >= maxBitchness:
+        $ steam_achievement("ach14")
+    if bitchmeterValue <= 153
+        $ steam_achievement("ach15")
+
     if amount > 0:
         show screen notify ("Bitchness increased!")
     else:

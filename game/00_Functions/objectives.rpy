@@ -121,6 +121,8 @@ init python:
                     questHelpJustUpdated = True
                     questHelpUpdatedDay = day
                 questHelpData[questCategory][idx][1] = status
+                if status == 1:
+                    questHelp_achievement_check(questHelpName)
                 del questHelpData[questCategory][idx]
                 questHelpData[questCategory].append([questHelpName, status])
 

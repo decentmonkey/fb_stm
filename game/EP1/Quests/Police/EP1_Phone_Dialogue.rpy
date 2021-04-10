@@ -388,6 +388,7 @@ label EP1_police_phone_dialogue1(target_scene):
     return
 
 label EP1_police_phone_dialogue1_happy_end:
+    $ steam_achievement("ach7")
     $ _dismiss_pause = False
     music Euro_Loop1
     imgl empty
