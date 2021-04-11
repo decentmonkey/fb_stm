@@ -53,6 +53,7 @@ init python:
             "escort_8" : "ach59",
             "escort_10" : "ach60",
             "philip_7" : "ach61",
+            "escort_13" : "ach62",
             "revenge_3" : "ach63"
         }
         if questHelp_achievements_list.has_key(questName):

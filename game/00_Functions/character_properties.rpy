@@ -152,7 +152,7 @@ label bitch(amount, place=False):
 
     if bitchmeterValue >= maxBitchness:
         $ steam_achievement("ach14")
-    if bitchmeterValue <= 153
+    if bitchmeterValue <= 153:
         $ steam_achievement("ach15")
 
     if amount > 0:
