@@ -79,58 +79,27 @@ screen show_image_screen_image(image_name):
     layer "master"
     zorder 15
 
-    if assetsStorageDirectory == False:
-        $ assetsStorageDirectory = renpy.config.savedir.replace("/saves", "/assets")
-    if image_name.find(assetsStorageDirectory) != -1:
-        python:
-            f = open(image_name,"rb")
-            image_binary=f.read()
-            f.close()
-            img1 = im.Data(image_binary, image_name)
-
-        fixed:
-#            add img1 at convert_resolution_transform
-            if blur_effect == 0:
-                add img1
-            else:
-                add img1 at blur
-                add img1:
-                    alpha 0.2
-                    xoffset -30
-                if blur_effect > 1:
-                    add img1:
-                        alpha 0.2
-                        xoffset 30
-                if blur_effect > 2:
-                    add img1:
-                        alpha 0.2
-                        yoffset -30
-                if blur_effect > 3:
-                    add img1:
-                        alpha 0.2
-                        yoffset 30
-    else:
-        fixed:
+    fixed:
 #            add image_name at convert_resolution_transform
-            if blur_effect == 0:
-                add image_name
-            else:
-                add image_name
+        if blur_effect == 0:
+            add image_name
+        else:
+            add image_name
+            add image_name:
+                alpha 0.2
+                xoffset -30
+            if blur_effect > 1:
                 add image_name:
                     alpha 0.2
-                    xoffset -30
-                if blur_effect > 1:
-                    add image_name:
-                        alpha 0.2
-                        xoffset 30
-                if blur_effect > 2:
-                    add image_name:
-                        alpha 0.2
-                        yoffset -30
-                if blur_effect > 3:
-                    add image_name:
-                        alpha 0.2
-                        yoffset 30
+                    xoffset 30
+            if blur_effect > 2:
+                add image_name:
+                    alpha 0.2
+                    yoffset -30
+            if blur_effect > 3:
+                add image_name:
+                    alpha 0.2
+                    yoffset 30
 
 
 
@@ -156,20 +125,8 @@ screen show_image_screen_image_overlay(image_name, canvas_offsets, overlayName):
 
 screen show_image_screen(image_name):
     layer "master"
-    if assetsStorageDirectory == False:
-        $ assetsStorageDirectory = renpy.config.savedir.replace("/saves", "/assets")
-    if image_name.find(assetsStorageDirectory) != -1:
-        python:
-            f = open(image_name,"rb")
-            image_binary=f.read()
-            f.close()
-            img1 = im.Data(image_binary, image_name)
-
-        fixed:
-            add img1
-    else:
-        fixed:
-            add image_name
+    fixed:
+        add image_name
 
 screen credits_screen(creditsList):
     frame:
@@ -2148,7 +2105,7 @@ screen main_menu():
                 style_prefix "navigation"
                 label t_(" "):
                     text_size gui.resolution.main_menu.font_size1
-                textbutton "Spanish (EP1)" action Language("spanish"):
+                textbutton "Spanish (beta)" action Language("spanish"):
                     text_size gui.resolution.main_menu.font_size2
                 textbutton "Italian (EP1)" action Language("italian"):
                     text_size gui.resolution.main_menu.font_size2
@@ -2604,8 +2561,8 @@ screen preferences():
                     textbutton "English" action Language("english")
                     textbutton "French" action Language("french")
                     textbutton "German" action Language("german")
+                    textbutton "Spanish (beta)" action Language("spanish")
                     textbutton "Italian (EP1)" action Language("italian")
-                    textbutton "Spanish (EP1)" action Language("spanish")
                     textbutton "Turkish (EP1)" action Language("turkish")
                     textbutton "Chinese (EP1)" action Language("chinese")
                     textbutton "Russian" action Language(None)

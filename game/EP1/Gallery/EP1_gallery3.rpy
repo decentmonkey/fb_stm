@@ -1994,7 +1994,8 @@ label gallery_4378:
 
     menu:
         "Да...":
-            jump gas_saleswoman_dialogue2_l4
+            pass
+#            jump gas_saleswoman_dialogue2_l4
         "У меня красивые трусики и они нравятся моему парню!":
             img 4503
             saleswoman "У меня красивые трусики и они нравятся моему парню!"

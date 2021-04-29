@@ -8,7 +8,7 @@ python early:
         "english": "Thanks for the English translation to\n[Aesthetic Dialectic] & [bambam]",
         "german": "Thanks for the German translation to\n[Ragnaroekr] & [Londo Mollari]",
         "french": "Thanks for the French translation to\n[YoyoRTx]",
-        "spanish": "Thanks for the Spanish translation to\n[Lupita]",
+        "spanish": "Thanks for the Spanish translation to\n[Lupita] & [CG7]",
         "chinese": "Thanks for the Chinese translation to\n[coolyama_u]",
         "turkish": "Thanks for the Turkish translation to\n[Yossarian]",
         "italian": "Thanks for the Italian translation to\n[snake]",
